@@ -111,7 +111,7 @@ a{color:inherit}
 /* ============ BAR ============ */
 .bar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 82%,transparent);
   backdrop-filter:blur(14px);border-bottom:1px solid var(--edge)}
-.bar-in{max-width:var(--maxw);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:20px}
+.bar-in{max-width:var(--maxw);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:20px;min-height:58px}
 .bar-name{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:10px}
 .pulse{width:8px;height:8px;border-radius:50%;background:var(--sys);box-shadow:0 0 0 0 var(--sys);animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--sys) 60%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
@@ -143,8 +143,7 @@ a{color:inherit}
 .eyebrow::before{content:"";width:34px;height:1px;background:var(--net)}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(48px,9.4vw,108px);line-height:.88;
   letter-spacing:.01em;text-transform:uppercase;margin:0 0 22px}
-h1 .l2{background:linear-gradient(100deg,var(--sec),var(--sys) 60%,var(--net));
-  -webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .l2{color:var(--ink);font-weight:700}
 h2{font-family:var(--display);font-weight:700;font-size:clamp(27px,4.2vw,42px);line-height:1;
   letter-spacing:.03em;text-transform:uppercase;margin:0 0 10px}
 h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-height:1.35}
@@ -170,7 +169,7 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
 /* ============ TOPOLOGY ============ */
 .topo{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:22px 20px 14px;
   box-shadow:var(--shadow);overflow:hidden}
-.topo svg{width:100%;height:auto;display:block}
+.topo svg{width:100%;height:auto;display:block;aspect-ratio:900/400}
 .tp-line{stroke:var(--edge);stroke-width:1.6;fill:none}
 .tp-flow{stroke-width:2;fill:none;stroke-dasharray:5 9;stroke-linecap:round;animation:flow 1.5s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-28}}
@@ -307,8 +306,8 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
   font-family:var(--mono);font-size:11.5px;color:var(--dim);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 /* ============ MOTION ============ */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
-.rv.in{opacity:1;transform:none}
+.rv{opacity:0;transition:opacity .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1}
 @keyframes wake{from{opacity:.2}to{opacity:1}}
 .port{animation:wake .5s backwards}
 
@@ -367,7 +366,7 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
   <section class="unit" id="top">
     <div class="u-label" aria-hidden="true"><span>U01 · IDENT</span></div>
     <p class="eyebrow rv">Senior Network &amp; Infrastructure Administrator</p>
-    <h1 class="rv">Satyaban<br>Choudhury</h1>
+    <h1 class="rv">Satyaban<br><span class="l2">Choudhury</span></h1>
     <p class="lede rv">I keep enterprise networks up. Three years running firewalls, VPN, Active Directory and managed endpoints for organisations of <strong>200+ users</strong> — and the audit paperwork that has to survive a SOC 2 review afterwards.</p>
     <div class="creds rv">
       <span class="cred ms"><i aria-hidden="true"></i>Microsoft 365 Certified: <b>Endpoint Administrator (MD-102)</b></span>
@@ -867,7 +866,5 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
   }
 })();
 </script>
-
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4f246a1ddebd40c78e0e8aa30b8bc769"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
