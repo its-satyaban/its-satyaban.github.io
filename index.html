@@ -5,279 +5,358 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Satyaban Choudhury — Network &amp; Infrastructure Administrator</title>
 <meta name="description" content="Senior Network &amp; Infrastructure Administrator in Hyderabad. Microsoft 365 Certified: Endpoint Administrator Associate (MD-102), Fortinet Certified Associate in Cybersecurity, CCNA. Firewalls, VPN architecture, Intune, Microsoft Defender, Active Directory and SOC 2 / ISO 27001 compliance for 200+ user environments.">
-<meta name="theme-color" content="#EEF1F5">
+<meta name="theme-color" content="#EDF1F7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ---------- themes ---------- */
+/* ============ THEMES ============ */
 :root[data-theme="light"]{
-  --bg:#EEF1F5;
+  --bg:#EDF1F7;
+  --bg-2:#E3EAF3;
   --surface:#FFFFFF;
-  --surface-2:#F7F9FB;
-  --edge:#D7DEE7;
-  --edge-soft:#E4EAF0;
-  --ink:#13202E;
-  --muted:#59687A;
-  --dim:#8593A3;
-  --c-net:#C0561B;
-  --c-sec:#2A66B8;
-  --c-sys:#17805A;
-  --c-gov:#8A5A38;
-  --led-off:#C7D0DA;
-  --shadow:0 22px 46px -30px rgba(19,32,46,.55);
+  --surface-2:#F5F8FC;
+  --edge:#D3DCE7;
+  --ink:#0E1A2B;
+  --muted:#54657A;
+  --dim:#8394A6;
+  --net:#D2620F;
+  --sec:#1F5FC4;
+  --sys:#0E7A55;
+  --gov:#7E5230;
+  --net-t:rgba(210,98,15,.10);
+  --sec-t:rgba(31,95,196,.10);
+  --sys-t:rgba(14,122,85,.10);
+  --gov-t:rgba(126,82,48,.10);
+  --grid:rgba(31,95,196,.055);
+  --glow-a:rgba(31,95,196,.13);
+  --glow-b:rgba(14,122,85,.10);
+  --glow-c:rgba(210,98,15,.09);
+  --shadow:0 20px 44px -30px rgba(14,26,43,.55);
+  --shadow-lift:0 26px 50px -26px rgba(14,26,43,.42);
+  --led-off:#C4CEDA;
 }
 :root[data-theme="dark"]{
-  --bg:#101720;
-  --surface:#18202B;
-  --surface-2:#212B38;
-  --edge:#2C3846;
-  --edge-soft:#232E3B;
-  --ink:#E7ECF3;
-  --muted:#8B98A9;
-  --dim:#5C6979;
-  --c-net:#E8823C;
-  --c-sec:#4C90E6;
-  --c-sys:#43BE84;
-  --c-gov:#B07A55;
-  --led-off:#3A4552;
-  --shadow:0 22px 46px -28px #000;
+  --bg:#0B121C;
+  --bg-2:#101A26;
+  --surface:#151F2C;
+  --surface-2:#1C2837;
+  --edge:#2A3949;
+  --ink:#E8EEF6;
+  --muted:#93A3B6;
+  --dim:#657588;
+  --net:#F0913F;
+  --sec:#5C9DF0;
+  --sys:#3FC98C;
+  --gov:#C08A5F;
+  --net-t:rgba(240,145,63,.13);
+  --sec-t:rgba(92,157,240,.13);
+  --sys-t:rgba(63,201,140,.13);
+  --gov-t:rgba(192,138,95,.13);
+  --grid:rgba(92,157,240,.07);
+  --glow-a:rgba(92,157,240,.16);
+  --glow-b:rgba(63,201,140,.12);
+  --glow-c:rgba(240,145,63,.10);
+  --shadow:0 22px 48px -28px #000;
+  --shadow-lift:0 28px 54px -24px #000;
+  --led-off:#33404F;
 }
 :root{
-  /* the patch panel is hardware — it stays dark in both themes */
-  --pp-a:#232E3B;
-  --pp-b:#161D26;
-  --pp-edge:#38465A;
-  --pp-jack:#080C11;
-  --p-net:#E8823C;
-  --p-sec:#4C90E6;
-  --p-sys:#43BE84;
-  --p-gov:#B07A55;
-  --led-on:#2FA36F;
-  --led-mid:#C9902B;
+  --pp-a:#243141;--pp-b:#141C26;--pp-edge:#3A4A5E;--pp-jack:#070B10;
+  --p-net:#F0913F;--p-sec:#5C9DF0;--p-sys:#3FC98C;--p-gov:#C08A5F;
+  --led-on:#22A06B;--led-mid:#C99027;
   --display:"Saira Condensed",Impact,sans-serif;
   --body:"IBM Plex Sans",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
-  --gut:76px;
-  --maxw:1080px;
+  --gut:76px;--maxw:1120px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--bg);color:var(--ink);
-  font-family:var(--body);font-size:16px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-  transition:background .3s,color .3s;
+  margin:0;color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background:var(--bg);transition:background .35s,color .35s;
+}
+/* ambient atmosphere */
+.aura{position:fixed;inset:0;z-index:-2;pointer-events:none;transition:opacity .35s}
+.aura::before,.aura::after{content:"";position:absolute;border-radius:50%;filter:blur(90px)}
+.aura::before{width:60vw;height:60vw;left:-18vw;top:-22vw;background:var(--glow-a)}
+.aura::after{width:52vw;height:52vw;right:-16vw;top:34vh;background:var(--glow-b)}
+.grid-bg{
+  position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:46px 46px;
+  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 40%,transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 40%,transparent 100%);
 }
 a{color:inherit}
-::selection{background:var(--c-net);color:#fff}
-:focus-visible{outline:2px solid var(--c-net);outline-offset:3px;border-radius:2px}
+::selection{background:var(--sec);color:#fff}
+:focus-visible{outline:2px solid var(--net);outline-offset:3px;border-radius:3px}
 
-/* ---------- rack chrome ---------- */
+/* scroll progress */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;
+  background:linear-gradient(90deg,var(--sec),var(--sys) 55%,var(--net));transition:width .1s linear}
+
+/* ============ RACK ============ */
 .rack{max-width:var(--maxw);margin:0 auto;position:relative}
-.unit{
-  position:relative;
-  border-top:1px solid var(--edge);
-  padding:56px 28px 56px calc(var(--gut) + 28px);
-}
+.unit{position:relative;border-top:1px solid var(--edge);padding:60px 28px 60px calc(var(--gut) + 28px)}
 .unit:first-of-type{border-top:0}
-.u-label{
-  position:absolute;left:0;top:0;bottom:0;width:var(--gut);
-  border-right:1px solid var(--edge);
-  font-family:var(--mono);font-size:10px;letter-spacing:.16em;
-  color:var(--dim);padding-top:58px;text-align:center;
-}
+.u-label{position:absolute;left:0;top:0;bottom:0;width:var(--gut);border-right:1px solid var(--edge);
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--dim);padding-top:62px;text-align:center}
 .u-label span{writing-mode:vertical-rl;text-orientation:mixed;display:inline-block}
-.u-label::before,.u-label::after{
-  content:"";position:absolute;left:50%;transform:translateX(-50%);
-  width:7px;height:7px;border-radius:50%;
-  background:var(--surface);border:1px solid var(--edge);
-}
-.u-label::before{top:26px}
-.u-label::after{bottom:26px}
+.u-label::before,.u-label::after{content:"";position:absolute;left:50%;transform:translateX(-50%);
+  width:7px;height:7px;border-radius:50%;background:var(--surface);border:1px solid var(--edge)}
+.u-label::before{top:28px}.u-label::after{bottom:28px}
 
-/* ---------- top bar ---------- */
-.bar{
-  position:sticky;top:0;z-index:50;
-  background:color-mix(in srgb,var(--bg) 90%,transparent);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--edge);
-}
-.bar-in{max-width:var(--maxw);margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:20px}
-.bar-name{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+/* ============ BAR ============ */
+.bar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 82%,transparent);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--edge)}
+.bar-in{max-width:var(--maxw);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:20px}
+.bar-name{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--sys);box-shadow:0 0 0 0 var(--sys);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--sys) 60%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
 .bar-nav{margin-left:auto;display:flex;gap:22px;flex-wrap:wrap;align-items:center}
-.bar-nav a{
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:.18s;
-}
-.bar-nav a:hover{color:var(--ink);border-bottom-color:var(--c-net)}
-.tog{
-  appearance:none;cursor:pointer;background:var(--surface);color:var(--muted);
-  border:1px solid var(--edge);border-radius:2px;padding:6px 12px;
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
-  display:flex;align-items:center;gap:8px;transition:.18s;
-}
-.tog:hover{color:var(--ink);border-color:var(--c-net)}
-.tog i{width:8px;height:8px;border-radius:50%;background:var(--c-net);display:inline-block}
+.bar-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;padding:4px 0;position:relative;transition:color .18s}
+.bar-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--net);transition:right .25s}
+.bar-nav a:hover{color:var(--ink)}
+.bar-nav a:hover::after{right:0}
 
-/* ---------- type ---------- */
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--c-net);margin:0 0 18px}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(46px,9vw,104px);line-height:.9;letter-spacing:.01em;text-transform:uppercase;margin:0 0 20px}
-h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,40px);line-height:1;letter-spacing:.03em;text-transform:uppercase;margin:0 0 8px}
+/* theme switch */
+.switch{appearance:none;border:0;padding:0;background:none;cursor:pointer;line-height:0}
+.sw-track{width:56px;height:28px;border-radius:20px;border:1px solid var(--edge);background:var(--surface-2);
+  display:block;position:relative;transition:background .3s,border-color .3s}
+.switch:hover .sw-track{border-color:var(--sec)}
+.sw-knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;
+  background:linear-gradient(145deg,#FDB44B,#F0913F);box-shadow:0 2px 8px rgba(240,145,63,.55);
+  transition:transform .34s cubic-bezier(.4,1.6,.5,1),background .3s,box-shadow .3s;
+  display:flex;align-items:center;justify-content:center}
+:root[data-theme="dark"] .sw-knob{transform:translateX(28px);background:linear-gradient(145deg,#C8D6EA,#8FA5C4);box-shadow:0 2px 10px rgba(143,165,196,.5)}
+.sw-knob svg{width:12px;height:12px;fill:#fff}
+.sw-knob .moon{display:none}
+:root[data-theme="dark"] .sw-knob .sun{display:none}
+:root[data-theme="dark"] .sw-knob .moon{display:block;fill:#1A2536}
+
+/* ============ TYPE ============ */
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--net);
+  margin:0 0 18px;display:flex;align-items:center;gap:11px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--net)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(48px,9.4vw,108px);line-height:.88;
+  letter-spacing:.01em;text-transform:uppercase;margin:0 0 22px}
+h1 .l2{background:linear-gradient(100deg,var(--sec),var(--sys) 60%,var(--net));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(27px,4.2vw,42px);line-height:1;
+  letter-spacing:.03em;text-transform:uppercase;margin:0 0 10px}
 h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-height:1.35}
 .sec-note{font-family:var(--mono);font-size:12px;color:var(--dim);margin:0 0 34px;letter-spacing:.04em}
-.lede{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:60ch;margin:0 0 26px}
+.lede{font-size:clamp(17px,2.2vw,20.5px);color:var(--muted);max-width:58ch;margin:0 0 26px}
 .lede strong{color:var(--ink);font-weight:600}
 
-/* ---------- credential ribbon ---------- */
-.creds{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
-.cred{
-  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-  background:var(--surface);border:1px solid var(--edge);border-radius:2px;
-  padding:6px 11px;display:inline-flex;align-items:center;gap:8px;color:var(--muted);
-}
-.cred i{width:7px;height:7px;border-radius:50%;background:var(--led-on);display:inline-block;flex:none}
-.cred.new i{background:var(--c-sec)}
+/* creds */
+.creds{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 26px}
+.cred{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  background:var(--surface);border:1px solid var(--edge);border-radius:20px;padding:7px 14px;
+  display:inline-flex;align-items:center;gap:9px;color:var(--muted);transition:.2s;box-shadow:var(--shadow)}
+.cred:hover{transform:translateY(-2px);border-color:var(--sec)}
+.cred i{width:7px;height:7px;border-radius:50%;flex:none;background:var(--sys);box-shadow:0 0 7px var(--sys)}
+.cred.ms i{background:var(--sec);box-shadow:0 0 7px var(--sec)}
+.cred.ft i{background:var(--net);box-shadow:0 0 7px var(--net)}
 .cred b{color:var(--ink);font-weight:600}
 
-/* ---------- hero meta ---------- */
-.meta{display:flex;flex-wrap:wrap;gap:10px 26px;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-bottom:40px}
+.meta{display:flex;flex-wrap:wrap;gap:10px 24px;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-bottom:42px}
 .meta a{text-decoration:none;border-bottom:1px solid var(--edge);padding-bottom:2px;transition:.18s}
-.meta a:hover{color:var(--ink);border-bottom-color:var(--c-net)}
+.meta a:hover{color:var(--sec);border-bottom-color:var(--sec)}
 
-/* ---------- patch panel (signature, always dark) ---------- */
-.pp{
-  background:linear-gradient(180deg,var(--pp-a),var(--pp-b));
-  border:1px solid var(--pp-edge);border-radius:4px;
-  padding:16px 46px;position:relative;box-shadow:var(--shadow);
-}
+/* ============ TOPOLOGY ============ */
+.topo{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:22px 20px 14px;
+  box-shadow:var(--shadow);overflow:hidden}
+.topo svg{width:100%;height:auto;display:block}
+.tp-line{stroke:var(--edge);stroke-width:1.6;fill:none}
+.tp-flow{stroke-width:2;fill:none;stroke-dasharray:5 9;stroke-linecap:round;animation:flow 1.5s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-28}}
+.tp-box{fill:var(--surface-2);stroke:var(--edge);stroke-width:1.4}
+.tp-t{font-family:var(--mono);font-size:9.5px;fill:var(--ink);letter-spacing:.06em}
+.tp-s{font-family:var(--mono);font-size:8px;fill:var(--dim);letter-spacing:.06em}
+.tp-cap{font-family:var(--mono);font-size:8px;fill:var(--dim);letter-spacing:.14em;text-transform:uppercase}
+.tp-node{transition:transform .2s}
+.tp-node:hover{transform:translateY(-2px)}
+.topo-cap{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.05em;
+  margin:12px 0 0;padding-top:12px;border-top:1px solid var(--edge)}
+
+/* ============ PATCH PANEL ============ */
+.pp{background:linear-gradient(180deg,var(--pp-a),var(--pp-b));border:1px solid var(--pp-edge);
+  border-radius:5px;padding:16px 46px;position:relative;box-shadow:var(--shadow)}
 .pp::before,.pp::after{content:"";position:absolute;top:0;bottom:0;width:34px}
 .pp::before{left:0;border-right:1px solid var(--pp-edge)}
 .pp::after{right:0;border-left:1px solid var(--pp-edge)}
 .ear{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--pp-b);border:1px solid var(--pp-edge)}
-.ear.tl{left:12px;top:12px}.ear.bl{left:12px;bottom:12px}
-.ear.tr{right:12px;top:12px}.ear.br{right:12px;bottom:12px}
+.ear.tl{left:12px;top:12px}.ear.bl{left:12px;bottom:12px}.ear.tr{right:12px;top:12px}.ear.br{right:12px;bottom:12px}
 .pp-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:7px}
-.port{
-  appearance:none;border:1px solid var(--pp-edge);background:var(--pp-b);
-  border-radius:2px 2px 3px 3px;padding:0;cursor:pointer;
-  aspect-ratio:1/1.18;position:relative;overflow:hidden;transition:transform .16s,border-color .16s;
-}
+.port{appearance:none;border:1px solid var(--pp-edge);background:var(--pp-b);border-radius:2px 2px 3px 3px;
+  padding:0;cursor:pointer;aspect-ratio:1/1.18;position:relative;overflow:hidden;transition:transform .16s,border-color .16s}
 .port .jack{position:absolute;inset:18% 22% 30% 22%;background:var(--pp-jack);border-radius:1px;box-shadow:inset 0 0 0 1px #000}
 .port .tab{position:absolute;left:38%;right:38%;bottom:14%;height:16%;background:var(--pp-jack);border-radius:0 0 2px 2px}
-.port .led{position:absolute;top:5%;left:50%;transform:translateX(-50%);width:5px;height:3px;border-radius:1px;background:#3A4552;transition:background .3s,box-shadow .3s}
-.port.live .led{background:var(--pc);box-shadow:0 0 7px var(--pc)}
+.port .led{position:absolute;top:5%;left:50%;transform:translateX(-50%);width:5px;height:3px;border-radius:1px;
+  background:#3A4552;transition:background .3s,box-shadow .3s}
+.port.live .led{background:var(--pc);box-shadow:0 0 8px var(--pc);animation:blink 3.4s infinite}
 .port.live .jack{box-shadow:inset 0 0 0 1px #000,inset 0 -14px 12px -10px var(--pc)}
-.port:hover,.port[aria-current="true"]{transform:translateY(-3px);border-color:var(--pc)}
-.pp-num{display:grid;grid-template-columns:repeat(12,1fr);gap:7px;font-family:var(--mono);font-size:9px;color:#5C6979;text-align:center;margin-top:7px;letter-spacing:.05em}
-.readout{
-  margin-top:14px;border:1px solid var(--edge);background:var(--surface);
-  border-radius:2px;padding:12px 16px;font-family:var(--mono);font-size:13px;
-  display:flex;gap:14px;align-items:center;min-height:46px;flex-wrap:wrap;
-}
+@keyframes blink{0%,88%,100%{opacity:1}92%{opacity:.25}96%{opacity:1}}
+.port:hover,.port[aria-current="true"]{transform:translateY(-4px);border-color:var(--pc)}
+.pp-num{display:grid;grid-template-columns:repeat(12,1fr);gap:7px;font-family:var(--mono);font-size:9px;
+  color:#5C6979;text-align:center;margin-top:7px;letter-spacing:.05em}
+.readout{margin-top:14px;border:1px solid var(--edge);background:var(--surface);border-radius:4px;
+  padding:13px 17px;font-family:var(--mono);font-size:13px;display:flex;gap:14px;align-items:center;
+  min-height:48px;flex-wrap:wrap;box-shadow:var(--shadow)}
 .readout .rd-port{color:var(--dim);letter-spacing:.1em;font-size:11px}
 .readout .rd-name{color:var(--ink);font-weight:500}
-.readout .rd-grp{margin-left:auto;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+.readout .rd-grp{margin-left:auto;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 10px;border-radius:20px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;font-family:var(--mono);font-size:11px;
+  color:var(--muted);letter-spacing:.06em}
 .legend b{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:8px;vertical-align:1px}
 
-/* ---------- status strip ---------- */
-.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border:1px solid var(--edge);border-radius:2px;overflow:hidden}
-.stat{padding:20px 22px;border-right:1px solid var(--edge);background:var(--surface)}
-.stat:last-child{border-right:0}
-.stat dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
-.stat dd{margin:0;font-family:var(--display);font-weight:700;font-size:32px;letter-spacing:.02em}
+/* ============ STATS ============ */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;
+  background:var(--edge);border:1px solid var(--edge);border-radius:5px;overflow:hidden;box-shadow:var(--shadow)}
+.stat{padding:22px;background:var(--surface);position:relative;overflow:hidden;transition:background .2s}
+.stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--sc);
+  transform:scaleY(0);transform-origin:bottom;transition:transform .4s}
+.stat.in::before{transform:scaleY(1)}
+.stat:hover{background:var(--surface-2)}
+.stat dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:9px}
+.stat dd{margin:0;font-family:var(--display);font-weight:700;font-size:36px;letter-spacing:.02em;color:var(--sc)}
 
-/* ---------- case studies ---------- */
-.cases{display:grid;gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:2px}
-.case{background:var(--surface);padding:28px}
-.case-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:14px;display:flex;align-items:center;gap:9px}
-.case-tag i{width:9px;height:9px;border-radius:2px;display:inline-block;font-style:normal}
+/* ============ CASES ============ */
+.cases{display:grid;gap:18px}
+.case{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:28px;
+  position:relative;overflow:hidden;box-shadow:var(--shadow);transition:transform .28s,box-shadow .28s,border-color .28s}
+.case::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--cc),transparent)}
+.case:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--cc)}
+.case-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  margin-bottom:15px;display:inline-flex;align-items:center;gap:8px;color:var(--cc);
+  background:var(--cct);border-radius:20px;padding:5px 12px}
+.case-tag i{width:7px;height:7px;border-radius:50%;background:var(--cc);display:inline-block;font-style:normal}
 .case p{margin:0 0 14px;color:var(--muted);font-size:15px}
 .case b{color:var(--ink);font-weight:600}
-.case .result{font-family:var(--mono);font-size:12.5px;color:var(--ink);border-left:2px solid var(--c-sys);padding-left:14px;margin:18px 0 0}
-.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
-.stack span{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;border:1px solid var(--edge);border-radius:2px;padding:3px 8px;color:var(--muted);background:var(--surface-2)}
+.case .result{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--cct);
+  border-left:3px solid var(--cc);border-radius:0 4px 4px 0;padding:12px 16px;margin:18px 0 0}
+.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.stack span{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;border:1px solid var(--edge);
+  border-radius:3px;padding:4px 9px;color:var(--muted);background:var(--surface-2);transition:.18s}
+.case:hover .stack span{border-color:color-mix(in srgb,var(--cc) 40%,var(--edge))}
 
-/* ---------- experience ---------- */
-.job{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-top:1px solid var(--edge)}
-.job:first-of-type{border-top:0;padding-top:0}
-.job-when{font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.04em;padding-top:4px}
-.job-when em{display:block;font-style:normal;color:var(--c-sys);margin-top:6px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.job-co{font-family:var(--mono);font-size:12.5px;color:var(--c-net);margin:0 0 12px;letter-spacing:.04em}
+/* ============ EXPERIENCE ============ */
+.jobs{position:relative;padding-left:32px}
+.jobs::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(180deg,var(--sys),var(--sec) 50%,var(--edge))}
+.job{position:relative;padding:0 0 34px}
+.job::before{content:"";position:absolute;left:-32px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--jc);box-shadow:0 0 0 4px var(--bg)}
+.job.now::before{background:var(--jc);box-shadow:0 0 0 4px var(--bg),0 0 12px var(--jc)}
+.job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:4px}
+.job-when{font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.04em}
+.job-now{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sys);background:var(--sys-t);border-radius:20px;padding:3px 10px}
+.job-co{font-family:var(--mono);font-size:12.5px;color:var(--jc);margin:0 0 14px;letter-spacing:.04em}
 .job ul{margin:0;padding:0;list-style:none}
-.job li{position:relative;padding-left:20px;margin-bottom:9px;color:var(--muted);font-size:15px}
-.job li::before{content:"";position:absolute;left:0;top:10px;width:9px;height:1px;background:var(--dim)}
+.job li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--muted);font-size:15px}
+.job li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;border-radius:2px;background:var(--jc);opacity:.55}
 
-/* ---------- competency table ---------- */
-.comp{width:100%;border-collapse:collapse;font-size:14.5px}
-.comp th,.comp td{text-align:left;padding:14px 0;border-top:1px solid var(--edge);vertical-align:top}
+/* ============ SKILLS ============ */
+.comp{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--surface);
+  border:1px solid var(--edge);border-radius:6px;overflow:hidden;box-shadow:var(--shadow)}
+.comp th,.comp td{text-align:left;padding:16px 20px;border-top:1px solid var(--edge);vertical-align:top}
 .comp tr:first-child th,.comp tr:first-child td{border-top:0}
-.comp th{width:210px;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);padding-right:24px}
+.comp tr{transition:background .18s}
+.comp tr:hover{background:var(--surface-2)}
+.comp th{width:230px;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink);position:relative}
+.comp th::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;background:var(--rc);border-radius:0 3px 3px 0}
 .comp td{color:var(--muted)}
 
-/* ---------- certs ---------- */
-.certs{list-style:none;margin:0;padding:0;display:grid;gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:2px}
-.certs li{background:var(--surface);padding:18px 22px;display:flex;align-items:center;gap:14px;font-size:15px;flex-wrap:wrap}
-.certs .led{width:9px;height:9px;border-radius:50%;flex:none;background:var(--led-off)}
-.certs .on .led{background:var(--led-on);box-shadow:0 0 8px color-mix(in srgb,var(--led-on) 70%,transparent)}
-.certs .mid .led{background:var(--led-mid);box-shadow:0 0 8px color-mix(in srgb,var(--led-mid) 70%,transparent)}
-.cert-body{flex:1 1 260px;min-width:0}
+/* ============ CERTS ============ */
+.certs{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.certs li{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:18px 20px;
+  display:flex;align-items:center;gap:16px;font-size:15px;flex-wrap:wrap;box-shadow:var(--shadow);transition:.24s}
+.certs li:hover{transform:translateX(4px);border-color:var(--bc)}
+.badge{width:42px;height:42px;border-radius:8px;flex:none;display:grid;place-items:center;
+  font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.04em;color:#fff;background:var(--bc)}
+.badge.ghost{background:var(--surface-2);color:var(--dim);border:1px dashed var(--edge)}
+.cert-body{flex:1 1 240px;min-width:0}
 .cert-body small{display:block;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em;margin-top:4px}
-.certs .st{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
-.certs .vf{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--c-sec);text-decoration:none;white-space:nowrap;
-  border:1px solid var(--edge);border-radius:2px;padding:6px 11px;
-  display:inline-flex;align-items:center;gap:7px;transition:.18s;
-}
-.certs .vf:hover{border-color:var(--c-sec);background:var(--surface-2)}
-.certs .vf::after{content:"↗";font-size:11px;line-height:1}
+.vf{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;
+  text-decoration:none;white-space:nowrap;background:var(--bc);border-radius:4px;padding:8px 14px;
+  display:inline-flex;align-items:center;gap:7px;transition:.2s;opacity:.92}
+.vf:hover{opacity:1;transform:translateY(-2px);box-shadow:0 8px 18px -8px var(--bc)}
+.vf::after{content:"↗";font-size:11px;line-height:1}
+.st{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--bc);background:var(--bct);border-radius:20px;padding:5px 11px;white-space:nowrap}
 
-/* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:2px}
-.cc{background:var(--surface);padding:24px;text-decoration:none;display:block;transition:background .18s}
-.cc:hover{background:var(--surface-2)}
-.cc small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:9px}
+/* ============ CONTACT ============ */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.cc{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:24px;
+  text-decoration:none;display:block;box-shadow:var(--shadow);transition:.26s;position:relative;overflow:hidden}
+.cc::after{content:"→";position:absolute;right:20px;bottom:20px;font-family:var(--mono);
+  color:var(--dim);transition:.26s}
+.cc:hover{transform:translateY(-4px);border-color:var(--sec);box-shadow:var(--shadow-lift)}
+.cc:hover::after{color:var(--sec);transform:translateX(4px)}
+.cc small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
 .cc span{font-size:15.5px;word-break:break-word}
-.foot{border-top:1px solid var(--edge);padding:26px 28px 26px calc(var(--gut) + 28px);font-family:var(--mono);font-size:11.5px;color:var(--dim);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot{border-top:1px solid var(--edge);padding:26px 28px 26px calc(var(--gut) + 28px);
+  font-family:var(--mono);font-size:11.5px;color:var(--dim);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
-@keyframes wake{from{opacity:.25}to{opacity:1}}
+/* ============ MOTION ============ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@keyframes wake{from{opacity:.2}to{opacity:1}}
 .port{animation:wake .5s backwards}
 
-@media (max-width:860px){
+@media (max-width:880px){
   :root{--gut:0px}
-  .unit{padding:44px 20px}
+  .unit{padding:46px 20px}
   .u-label{display:none}
   .foot{padding-left:20px;padding-right:20px}
   .pp{padding:14px 16px}
   .pp::before,.pp::after,.ear{display:none}
   .pp-grid,.pp-num{grid-template-columns:repeat(6,1fr)}
-  .job{grid-template-columns:1fr;gap:12px}
-  .comp th{width:auto;display:block;padding-bottom:4px;border-top:0}
-  .comp td{display:block;padding-top:0;border-top:0}
-  .comp tr{display:block;border-top:1px solid var(--edge);padding:14px 0}
+  .comp th{width:auto;display:block;padding:14px 20px 4px;border-top:0}
+  .comp td{display:block;padding:0 20px 14px;border-top:0}
+  .comp tr{display:block;border-top:1px solid var(--edge)}
   .comp tr:first-child{border-top:0}
+  .comp th::before{top:14px;bottom:auto;height:14px}
   .bar-nav a{display:none}
+  .topo{padding:14px 10px 10px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  .prog{display:none}
 }
 </style>
 </head>
 <body>
+<div class="aura" aria-hidden="true"></div>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
 
 <header class="bar">
   <div class="bar-in">
-    <div class="bar-name">Satyaban Choudhury</div>
+    <div class="bar-name"><i class="pulse" aria-hidden="true"></i>Satyaban Choudhury</div>
     <nav class="bar-nav" aria-label="Sections">
+      <a href="#architecture">Architecture</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
-      <button class="tog" id="themeBtn" type="button" aria-pressed="false"><i aria-hidden="true"></i><span id="togLabel">Dark</span></button>
+      <button class="switch" id="themeBtn" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+        <span class="sw-track"><span class="sw-knob">
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13.5a1 1 0 0 1 1 1V6a1 1 0 1 1-2 0V4.5a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1V21a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1zM21 11a1 1 0 1 1 0 2h-1.5a1 1 0 1 1 0-2H21zM4.5 11a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h1.5zm13.8-5.3a1 1 0 0 1 0 1.4l-1 1.1a1 1 0 0 1-1.5-1.5l1.1-1a1 1 0 0 1 1.4 0zM7.2 16.8a1 1 0 0 1 0 1.4l-1.1 1a1 1 0 0 1-1.4-1.4l1-1.1a1 1 0 0 1 1.5 0zm11.1 1.4a1 1 0 0 1-1.4 0l-1.1-1a1 1 0 0 1 1.5-1.5l1 1.1a1 1 0 0 1 0 1.4zM5.7 5.7a1 1 0 0 1 1.5 0l1 1.1a1 1 0 1 1-1.4 1.4l-1.1-1a1 1 0 0 1 0-1.5z"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 13.2A9 9 0 0 1 10.8 3a9 9 0 1 0 10.2 10.2z"/></svg>
+        </span></span>
+      </button>
     </nav>
   </div>
 </header>
@@ -287,23 +366,125 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
   <!-- HERO -->
   <section class="unit" id="top">
     <div class="u-label" aria-hidden="true"><span>U01 · IDENT</span></div>
-    <p class="eyebrow">Senior Network &amp; Infrastructure Administrator</p>
-    <h1>Satyaban<br>Choudhury</h1>
-    <p class="lede">I keep enterprise networks up. Three years running firewalls, VPN, Active Directory and managed endpoints for organisations of <strong>200+ users</strong> — and the audit paperwork that has to survive a SOC 2 review afterwards.</p>
-    <div class="creds">
-      <span class="cred new"><i aria-hidden="true"></i>Microsoft 365 Certified: <b>Endpoint Administrator Associate (MD-102)</b></span>
-      <span class="cred new"><i aria-hidden="true"></i>Fortinet Certified Associate: <b>Cybersecurity</b></span>
+    <p class="eyebrow rv">Senior Network &amp; Infrastructure Administrator</p>
+    <h1 class="rv">Satyaban<br><span class="l2">Choudhury</span></h1>
+    <p class="lede rv">I keep enterprise networks up. Three years running firewalls, VPN, Active Directory and managed endpoints for organisations of <strong>200+ users</strong> — and the audit paperwork that has to survive a SOC 2 review afterwards.</p>
+    <div class="creds rv">
+      <span class="cred ms"><i aria-hidden="true"></i>Microsoft 365 Certified: <b>Endpoint Administrator (MD-102)</b></span>
+      <span class="cred ft"><i aria-hidden="true"></i>Fortinet Certified Associate: <b>Cybersecurity</b></span>
       <span class="cred"><i aria-hidden="true"></i><b>CCNA</b></span>
     </div>
-    <div class="meta">
+    <div class="meta rv">
       <span>Hyderabad, India</span>
       <a href="mailto:chou.satyaban123@gmail.com">chou.satyaban123@gmail.com</a>
       <a href="tel:+917735373892">+91 77353 73892</a>
       <a href="https://linkedin.com/in/satyaban-choudhury" target="_blank" rel="noopener">LinkedIn</a>
       <a href="Satyaban_Choudhury_Resume_Pro_Update.pdf" download>Download résumé (PDF)</a>
     </div>
+  </section>
 
-    <div class="pp-wrap">
+  <!-- ARCHITECTURE -->
+  <section class="unit" id="architecture">
+    <div class="u-label" aria-hidden="true"><span>U02 · TOPOLOGY</span></div>
+    <h2 class="rv">The network I run</h2>
+    <p class="sec-note rv">A simplified view of the segmented estate at SmartDocs — perimeter, core, and three VLANs.</p>
+    <div class="topo rv">
+      <svg viewBox="0 0 900 400" role="img" aria-label="Network topology: internet and remote VPN users pass through a FortiGate firewall to a core switch, which segments traffic into staff, wireless and server VLANs.">
+        <!-- links -->
+        <path class="tp-line" d="M118 92 H228"/>
+        <path class="tp-flow" style="stroke:var(--sec)" d="M118 92 H228"/>
+        <path class="tp-line" d="M118 212 H228"/>
+        <path class="tp-flow" style="stroke:var(--sec);animation-delay:.5s" d="M118 212 H228"/>
+        <path class="tp-line" d="M330 152 H430"/>
+        <path class="tp-flow" style="stroke:var(--sys)" d="M330 152 H430"/>
+        <path class="tp-line" d="M540 152 C600 152 600 78 660 78"/>
+        <path class="tp-flow" style="stroke:var(--net)" d="M540 152 C600 152 600 78 660 78"/>
+        <path class="tp-line" d="M540 152 H660"/>
+        <path class="tp-flow" style="stroke:var(--net);animation-delay:.35s" d="M540 152 H660"/>
+        <path class="tp-line" d="M540 152 C600 152 600 240 660 240"/>
+        <path class="tp-flow" style="stroke:var(--net);animation-delay:.7s" d="M540 152 C600 152 600 240 660 240"/>
+        <path class="tp-line" d="M760 300 V330 H500 V196"/>
+        <path class="tp-flow" style="stroke:var(--gov);animation-delay:.2s" d="M760 300 V330 H500 V196"/>
+
+        <!-- internet -->
+        <g class="tp-node">
+          <rect class="tp-box" x="14" y="66" width="104" height="52" rx="6"/>
+          <text class="tp-t" x="66" y="88" text-anchor="middle">INTERNET</text>
+          <text class="tp-s" x="66" y="103" text-anchor="middle">WAN uplink</text>
+        </g>
+        <!-- remote users -->
+        <g class="tp-node">
+          <rect class="tp-box" x="14" y="186" width="104" height="52" rx="6"/>
+          <text class="tp-t" x="66" y="208" text-anchor="middle">REMOTE 100+</text>
+          <text class="tp-s" x="66" y="223" text-anchor="middle">SSL / IPsec VPN</text>
+        </g>
+        <!-- firewall -->
+        <g class="tp-node">
+          <rect class="tp-box" x="228" y="112" width="102" height="80" rx="6" style="stroke:var(--sec);stroke-width:2"/>
+          <rect x="228" y="112" width="102" height="4" rx="2" fill="var(--sec)"/>
+          <text class="tp-t" x="279" y="140" text-anchor="middle" style="fill:var(--sec)">FORTIGATE</text>
+          <text class="tp-t" x="279" y="155" text-anchor="middle" style="fill:var(--sec)">100F / 80F</text>
+          <text class="tp-s" x="279" y="172" text-anchor="middle">IPS · web filter</text>
+          <text class="tp-cap" x="279" y="205" text-anchor="middle">PERIMETER</text>
+        </g>
+        <!-- core switch -->
+        <g class="tp-node">
+          <rect class="tp-box" x="430" y="112" width="110" height="80" rx="6" style="stroke:var(--sys);stroke-width:2"/>
+          <rect x="430" y="112" width="110" height="4" rx="2" fill="var(--sys)"/>
+          <text class="tp-t" x="485" y="140" text-anchor="middle" style="fill:var(--sys)">CORE SWITCH</text>
+          <text class="tp-t" x="485" y="155" text-anchor="middle" style="fill:var(--sys)">CBS350</text>
+          <text class="tp-s" x="485" y="172" text-anchor="middle">802.1Q trunk</text>
+          <text class="tp-cap" x="485" y="205" text-anchor="middle">CORE</text>
+        </g>
+        <!-- vlans -->
+        <g class="tp-node">
+          <rect class="tp-box" x="660" y="52" width="180" height="52" rx="6"/>
+          <rect x="660" y="52" width="4" height="52" rx="2" fill="var(--net)"/>
+          <text class="tp-t" x="678" y="74">VLAN 10 · STAFF</text>
+          <text class="tp-s" x="678" y="90">200+ managed endpoints</text>
+        </g>
+        <g class="tp-node">
+          <rect class="tp-box" x="660" y="126" width="180" height="52" rx="6"/>
+          <rect x="660" y="126" width="4" height="52" rx="2" fill="var(--net)"/>
+          <text class="tp-t" x="678" y="148">VLAN 20 · WIRELESS</text>
+          <text class="tp-s" x="678" y="164">Aironet 1850 · PoE</text>
+        </g>
+        <g class="tp-node">
+          <rect class="tp-box" x="660" y="214" width="180" height="52" rx="6"/>
+          <rect x="660" y="214" width="4" height="52" rx="2" fill="var(--net)"/>
+          <text class="tp-t" x="678" y="236">VLAN 30 · SERVERS</text>
+          <text class="tp-s" x="678" y="252">AD · TrueNAS · ESSL</text>
+        </g>
+        <!-- management -->
+        <g class="tp-node">
+          <rect class="tp-box" x="660" y="278" width="200" height="46" rx="6" style="stroke-dasharray:4 4"/>
+          <text class="tp-t" x="678" y="298" style="fill:var(--gov)">INTUNE · DEFENDER</text>
+          <text class="tp-s" x="678" y="313">policy · posture · alerts</text>
+        </g>
+        <text class="tp-cap" x="760" y="348" text-anchor="middle">OUT-OF-BAND MANAGEMENT PLANE</text>
+      </svg>
+      <p class="topo-cap">Traffic is inspected at the perimeter, trunked to the core, then segmented so a compromised endpoint in one VLAN cannot reach another. Uptime held at 99.5%+.</p>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="unit">
+    <div class="u-label" aria-hidden="true"><span>U03 · STATUS</span></div>
+    <dl class="strip rv">
+      <div class="stat" style="--sc:var(--sys)"><dt>Uptime SLA held</dt><dd data-to="99.5" data-suf="%">0%</dd></div>
+      <div class="stat" style="--sc:var(--sec)"><dt>Users supported</dt><dd data-to="200" data-suf="+">0</dd></div>
+      <div class="stat" style="--sc:var(--net)"><dt>AD objects managed</dt><dd data-to="500" data-suf="+">0</dd></div>
+      <div class="stat" style="--sc:var(--gov)"><dt>Downtime reduced</dt><dd data-to="30" data-suf="%">0%</dd></div>
+      <div class="stat" style="--sc:var(--sec)"><dt>Concurrent VPN</dt><dd data-to="100" data-suf="+">0</dd></div>
+    </dl>
+  </section>
+
+  <!-- SKILLS PANEL -->
+  <section class="unit">
+    <div class="u-label" aria-hidden="true"><span>U04 · PORTS</span></div>
+    <h2 class="rv">What's patched in</h2>
+    <p class="sec-note rv">Twenty-four ports, colour-coded to the T568B cable standard. Hover or tap one.</p>
+    <div class="rv">
       <div class="pp">
         <i class="ear tl" aria-hidden="true"></i><i class="ear bl" aria-hidden="true"></i>
         <i class="ear tr" aria-hidden="true"></i><i class="ear br" aria-hidden="true"></i>
@@ -322,36 +503,24 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
       </div>
       <noscript>
         <p style="font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:16px">
-          Networking: OSPF, EIGRP, VLAN, VTP, STP, TCP/IP, DNS, DHCP, Cisco CBS350, Aironet 1850 ·
-          Security: FortiGate 100F/80F, Sophos XGS2100, SSL VPN, IPsec VPN, Bitdefender GravityZone, Sophos DLP, FortiClient EMS ·
-          Servers &amp; Cloud: Windows Server 2019, Active Directory, Group Policy, Microsoft 365, Intune, Autopilot, PowerShell, Linux, TrueNAS ·
-          Governance: SOC 2 Type II, ISO 27001, incident response, SOP authoring.
+          Networking: OSPF, EIGRP, VLAN, VTP, STP, DNS, DHCP, Cisco CBS350, Aironet 1850 ·
+          Security: FortiGate 100F/80F, Sophos XGS2100, SSL VPN, IPsec VPN, Microsoft Defender, Bitdefender GravityZone, Sophos DLP, FortiClient EMS ·
+          Servers &amp; Cloud: Windows Server 2019, Active Directory, Group Policy, Intune, Conditional Access, PowerShell ·
+          Governance: SOC 2 Type II, ISO 27001.
         </p>
       </noscript>
     </div>
   </section>
 
-  <!-- STATUS -->
-  <section class="unit">
-    <div class="u-label" aria-hidden="true"><span>U02 · STATUS</span></div>
-    <dl class="strip">
-      <div class="stat"><dt>Uptime SLA held</dt><dd>99.5%</dd></div>
-      <div class="stat"><dt>Users supported</dt><dd>200+</dd></div>
-      <div class="stat"><dt>AD objects managed</dt><dd>500+</dd></div>
-      <div class="stat"><dt>Downtime reduced</dt><dd>30%</dd></div>
-      <div class="stat"><dt>Concurrent VPN users</dt><dd>100+</dd></div>
-    </dl>
-  </section>
-
   <!-- WORK -->
   <section class="unit" id="work">
-    <div class="u-label" aria-hidden="true"><span>U03 · WORK</span></div>
-    <h2>Selected infrastructure work</h2>
-    <p class="sec-note">Five builds, each written as: what was broken, what I did, what changed.</p>
+    <div class="u-label" aria-hidden="true"><span>U05 · WORK</span></div>
+    <h2 class="rv">Selected infrastructure work</h2>
+    <p class="sec-note rv">Five builds, each written as: what was broken, what I did, what changed.</p>
 
     <div class="cases">
-      <article class="case">
-        <div class="case-tag"><i style="background:var(--c-sec)"></i>Remote access architecture</div>
+      <article class="case rv" style="--cc:var(--sec);--cct:var(--sec-t)">
+        <div class="case-tag"><i></i>Remote access architecture</div>
         <h3>Secure remote access for a distributed workforce</h3>
         <p>Staff across several geographically separated sites needed to reach internal systems without exposing them to the open internet, and the existing access path was generating recurring incidents.</p>
         <p>I designed and now operate the <b>FortiClient VPN infrastructure</b> using both SSL and IPsec tunnels, sized for concurrent load and split by site. Access is tied to Active Directory identity, and tunnel policy is enforced at the FortiGate rather than on the client.</p>
@@ -359,17 +528,17 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
         <div class="stack"><span>FortiGate 100F</span><span>SSL VPN</span><span>IPsec</span><span>FortiClient EMS</span><span>Active Directory</span></div>
       </article>
 
-      <article class="case">
-        <div class="case-tag"><i style="background:var(--c-sys)"></i>Endpoint management · MD-102</div>
-        <h3>Managed endpoint lifecycle and data-loss controls</h3>
+      <article class="case rv" style="--cc:var(--sys);--cct:var(--sys-t)">
+        <div class="case-tag"><i></i>Endpoint management · MD-102</div>
+        <h3>Managed endpoint lifecycle and threat visibility</h3>
         <p>Devices were being onboarded inconsistently, and there was no enforced way to stop sensitive customer data leaving the organisation.</p>
-        <p>I administer <b>Microsoft Intune (MDM/MAM)</b> for onboarding, compliance policy, conditional access and remote wipe, and work in the <b>Microsoft Defender portal</b> for threat detection, incident triage and security posture across the estate. <b>Bitdefender GravityZone</b> handles real-time response on the endpoint, and <b>Sophos DLP</b> rules guard against unauthorised exfiltration. Backup and recovery sit on TrueNAS and NAS storage.</p>
+        <p>I administer <b>Microsoft Intune (MDM/MAM)</b> for onboarding, compliance policy, conditional access and remote wipe, and work in the <b>Microsoft Defender portal</b> for threat detection, incident triage and security posture across the estate. <b>Bitdefender GravityZone</b> handles real-time response on the endpoint, and <b>Sophos DLP</b> rules guard against unauthorised exfiltration.</p>
         <p class="result">Every device enrolled, compliant and remotely recoverable; threats surfaced and triaged from a single console.</p>
-        <div class="stack"><span>Intune MDM/MAM</span><span>Microsoft Defender</span><span>Conditional access</span><span>Compliance policy</span><span>Bitdefender GravityZone</span><span>Sophos DLP</span><span>TrueNAS</span></div>
+        <div class="stack"><span>Intune MDM/MAM</span><span>Microsoft Defender</span><span>Conditional access</span><span>Bitdefender GravityZone</span><span>Sophos DLP</span><span>TrueNAS</span></div>
       </article>
 
-      <article class="case">
-        <div class="case-tag"><i style="background:var(--c-gov)"></i>Compliance &amp; audit</div>
+      <article class="case rv" style="--cc:var(--gov);--cct:var(--gov-t)">
+        <div class="case-tag"><i></i>Compliance &amp; audit</div>
         <h3>SOC 2 Type II and ISO 27001 audit readiness</h3>
         <p>The organisation needed to demonstrate to external auditors that its IT controls were not just written down but actually operating — the part most teams fail on.</p>
         <p>I ran evidence collection across access control, patching, logging and endpoint protection, identified where controls had gaps in practice, remediated them, and coordinated directly with the external auditors through the review. I also authored the <b>SOPs, network runbooks, security policies and incident response playbooks</b> that keep the controls repeatable after the audit ends.</p>
@@ -377,8 +546,8 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
         <div class="stack"><span>SOC 2 Type II</span><span>ISO 27001</span><span>Policy authoring</span><span>Incident response</span></div>
       </article>
 
-      <article class="case">
-        <div class="case-tag"><i style="background:var(--c-sys)"></i>Fleet migration</div>
+      <article class="case rv" style="--cc:var(--sys);--cct:var(--sys-t)">
+        <div class="case-tag"><i></i>Fleet migration</div>
         <h3>Windows 11 rollout across 150+ endpoints</h3>
         <p>A 150-seat call centre had to move to Windows 11 without losing a working day or a single user's data — in an environment where idle agents cost money by the minute.</p>
         <p>I built the standard image, resolved driver compatibility ahead of rollout, sequenced the migration by team, and validated each machine post-deployment before handing it back.</p>
@@ -386,8 +555,8 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
         <div class="stack"><span>Windows 11</span><span>Imaging</span><span>Driver compatibility</span><span>User migration</span></div>
       </article>
 
-      <article class="case">
-        <div class="case-tag"><i style="background:var(--c-net)"></i>Network &amp; perimeter</div>
+      <article class="case rv" style="--cc:var(--net);--cct:var(--net-t)">
+        <div class="case-tag"><i></i>Network &amp; perimeter</div>
         <h3>Segmented LAN/WLAN with next-gen perimeter defence</h3>
         <p>A flat network means one compromised endpoint reaches everything. The estate also had to stay reachable for 200+ users with no tolerance for connectivity gaps.</p>
         <p>I run the LAN and wireless layer on <b>Cisco CBS350 managed switches, Aironet 1850 wireless and TP-Link PoE</b>, with traffic separated by VLAN policy and inspected at <b>FortiGate 100F/80F</b> firewalls for threats and web filtering at the perimeter.</p>
@@ -399,13 +568,16 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
 
   <!-- EXPERIENCE -->
   <section class="unit" id="experience">
-    <div class="u-label" aria-hidden="true"><span>U04 · HISTORY</span></div>
-    <h2>Experience</h2>
-    <p class="sec-note">Three years, three environments, progressively larger estates.</p>
+    <div class="u-label" aria-hidden="true"><span>U06 · HISTORY</span></div>
+    <h2 class="rv">Experience</h2>
+    <p class="sec-note rv">Three years, three environments, progressively larger estates.</p>
 
-    <article class="job">
-      <div class="job-when">Jul 2025 — Present<em>Current</em></div>
-      <div>
+    <div class="jobs">
+      <article class="job now rv" style="--jc:var(--sys)">
+        <div class="job-head">
+          <span class="job-when">Jul 2025 — Present</span>
+          <span class="job-now">Current</span>
+        </div>
         <h3>Sr. System &amp; Network Administrator</h3>
         <p class="job-co">SmartDocs Business Solutions · Hyderabad</p>
         <ul>
@@ -414,17 +586,15 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
           <li>Run LAN/WLAN operations on Cisco CBS350, Aironet 1850 and TP-Link PoE infrastructure.</li>
           <li>Configure and tune FortiGate 100F/80F firewalls for perimeter defence, threat inspection and VLAN segmentation.</li>
           <li>Administer Microsoft Intune for endpoint lifecycle: onboarding, compliance, conditional access, remote wipe.</li>
-          <li>Operate the Microsoft Defender portal for threat detection, alert and incident triage, and security posture monitoring across the estate.</li>
+          <li>Operate the Microsoft Defender portal for threat detection, alert and incident triage, and security posture monitoring.</li>
           <li>Manage Active Directory (500+ objects) and ESSL biometric servers for identity and access control.</li>
           <li>Write PowerShell automation for routine administration and validate enterprise patch deployment.</li>
           <li>Drive SOC 2 Type II and ISO 27001 audits, and author the SOPs, runbooks and IR playbooks behind them.</li>
         </ul>
-      </div>
-    </article>
+      </article>
 
-    <article class="job">
-      <div class="job-when">Jun 2024 — Jun 2025</div>
-      <div>
+      <article class="job rv" style="--jc:var(--sec)">
+        <div class="job-head"><span class="job-when">Jun 2024 — Jun 2025</span></div>
         <h3>IT &amp; Network Administrator</h3>
         <p class="job-co">Hearing Solution Pvt. Ltd.</p>
         <ul>
@@ -435,12 +605,10 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
           <li>Implemented Sophos DLP to protect customer and business data from exfiltration.</li>
           <li>Configured ESSL, TrueNAS and WD My Cloud EX4100 for centralised storage, backup and DR readiness.</li>
         </ul>
-      </div>
-    </article>
+      </article>
 
-    <article class="job">
-      <div class="job-when">May 2023 — Jun 2024</div>
-      <div>
+      <article class="job rv" style="--jc:var(--net)">
+        <div class="job-head"><span class="job-when">May 2023 — Jun 2024</span></div>
         <h3>Network Engineer</h3>
         <p class="job-co">YuppTV India Pvt. Ltd. · Hyderabad</p>
         <ul>
@@ -450,111 +618,112 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
           <li>Managed Windows 10 Enterprise imaging and post-deployment validation.</li>
           <li>Resolved complex macOS issues and handled Office 365 troubleshooting organisation-wide.</li>
         </ul>
-      </div>
-    </article>
+      </article>
+    </div>
   </section>
 
   <!-- SKILLS -->
   <section class="unit" id="skills">
-    <div class="u-label" aria-hidden="true"><span>U05 · STACK</span></div>
-    <h2>Technical stack</h2>
-    <p class="sec-note">Everything below has been run in production, not just studied.</p>
-    <table class="comp">
+    <div class="u-label" aria-hidden="true"><span>U07 · STACK</span></div>
+    <h2 class="rv">Technical stack</h2>
+    <p class="sec-note rv">Everything below has been run in production, not just studied.</p>
+    <table class="comp rv">
       <tbody>
-        <tr><th scope="row">Networking</th><td>Switching &amp; routing (RIP, EIGRP, OSPF), VLAN, VTP, STP, PVST, TCP/IP, DNS, DHCP, LAN/WAN design</td></tr>
-        <tr><th scope="row">Firewall &amp; VPN</th><td>Fortinet FortiGate 100F/80F, Sophos XGS2100, SSL VPN, IPsec VPN, FortiClient, web filtering</td></tr>
-        <tr><th scope="row">Endpoint management</th><td>Microsoft Intune (MDM/MAM), compliance policies, conditional access, remote wipe, patch management</td></tr>
-        <tr><th scope="row">Server &amp; AD</th><td>Windows Server 2019 / 2012 R2, Active Directory (500+ objects), Group Policy, TrueNAS, ESSL</td></tr>
-        <tr><th scope="row">Wireless &amp; hardware</th><td>Cisco Aironet 1850, Cisco CBS350 switches, HPE ProLiant, Dell PowerEdge, TP-Link PoE</td></tr>
-        <tr><th scope="row">Cloud &amp; SaaS</th><td>Microsoft 365, SharePoint, OneDrive, Zoho Suite</td></tr>
-        <tr><th scope="row">Threat &amp; endpoint security</th><td>Microsoft Defender portal (detection, incident triage, security posture), Bitdefender GravityZone, Sophos DLP, FortiClient EMS</td></tr>
-        <tr><th scope="row">Compliance &amp; GRC</th><td>SOC 2 Type II, ISO 27001 auditing, SOP authoring, policy governance, incident response</td></tr>
-        <tr><th scope="row">OS &amp; scripting</th><td>Linux (CentOS 7, Ubuntu), macOS, Windows 10/11 Enterprise, PowerShell automation</td></tr>
-        <tr><th scope="row">VoIP &amp; ITSM</th><td>Avaya IP Office, AssetTiger, CMDB documentation, AnyDesk, TeamViewer, RDP</td></tr>
+        <tr style="--rc:var(--net)"><th scope="row">Networking</th><td>Switching &amp; routing (RIP, EIGRP, OSPF), VLAN, VTP, STP, PVST, TCP/IP, DNS, DHCP, LAN/WAN design</td></tr>
+        <tr style="--rc:var(--sec)"><th scope="row">Firewall &amp; VPN</th><td>Fortinet FortiGate 100F/80F, Sophos XGS2100, SSL VPN, IPsec VPN, FortiClient, web filtering</td></tr>
+        <tr style="--rc:var(--sys)"><th scope="row">Endpoint management</th><td>Microsoft Intune (MDM/MAM), compliance policies, conditional access, remote wipe, patch management</td></tr>
+        <tr style="--rc:var(--sec)"><th scope="row">Threat &amp; endpoint security</th><td>Microsoft Defender portal (detection, incident triage, security posture), Bitdefender GravityZone, Sophos DLP, FortiClient EMS</td></tr>
+        <tr style="--rc:var(--sys)"><th scope="row">Server &amp; AD</th><td>Windows Server 2019 / 2012 R2, Active Directory (500+ objects), Group Policy, TrueNAS, ESSL</td></tr>
+        <tr style="--rc:var(--net)"><th scope="row">Wireless &amp; hardware</th><td>Cisco Aironet 1850, Cisco CBS350 switches, HPE ProLiant, Dell PowerEdge, TP-Link PoE</td></tr>
+        <tr style="--rc:var(--sys)"><th scope="row">Cloud &amp; SaaS</th><td>Microsoft 365, SharePoint, OneDrive, Zoho Suite</td></tr>
+        <tr style="--rc:var(--gov)"><th scope="row">Compliance &amp; GRC</th><td>SOC 2 Type II, ISO 27001 auditing, SOP authoring, policy governance, incident response</td></tr>
+        <tr style="--rc:var(--sys)"><th scope="row">OS &amp; scripting</th><td>Linux (CentOS 7, Ubuntu), macOS, Windows 10/11 Enterprise, PowerShell automation</td></tr>
+        <tr style="--rc:var(--net)"><th scope="row">VoIP &amp; ITSM</th><td>Avaya IP Office, AssetTiger, CMDB documentation, AnyDesk, TeamViewer, RDP</td></tr>
       </tbody>
     </table>
   </section>
 
   <!-- CERTS -->
   <section class="unit" id="certifications">
-    <div class="u-label" aria-hidden="true"><span>U06 · CERTS</span></div>
-    <h2>Certifications</h2>
-    <p class="sec-note">Green is earned. Amber is in progress. Grey is scheduled. Every credential below links to its issuer for verification.</p>
+    <div class="u-label" aria-hidden="true"><span>U08 · CERTS</span></div>
+    <h2 class="rv">Certifications</h2>
+    <p class="sec-note rv">Every credential below links to its issuer for verification.</p>
     <ul class="certs">
-      <li class="on">
-        <i class="led" aria-hidden="true"></i>
+      <li class="rv" style="--bc:var(--sec);--bct:var(--sec-t)">
+        <span class="badge" aria-hidden="true">MS</span>
         <div class="cert-body">
           Microsoft 365 Certified: Endpoint Administrator Associate (MD-102)
           <small>Earned June 2026 · valid to June 2027 · Microsoft Learn</small>
         </div>
-        <a class="vf" href="https://learn.microsoft.com/en-us/users/satyabanchoudhury-4201/credentials/eb38431d11d5ee20" target="_blank" rel="noopener" aria-label="Verify MD-102 certification on Microsoft Learn">Verify</a>
+        <a class="vf" href="https://learn.microsoft.com/en-us/users/satyabanchoudhury-4201/credentials/eb38431d11d5ee20" target="_blank" rel="noopener" aria-label="Verify MD-102 on Microsoft Learn">Verify</a>
         <span class="st">Certified</span>
       </li>
-      <li class="on">
-        <i class="led" aria-hidden="true"></i>
+      <li class="rv" style="--bc:var(--net);--bct:var(--net-t)">
+        <span class="badge" aria-hidden="true">FCA</span>
         <div class="cert-body">
           Fortinet Certified Associate — Cybersecurity
           <small>Issued March 2026 · valid to March 2028 · Credly</small>
         </div>
-        <a class="vf" href="https://www.credly.com/badges/872333b7-f844-4e62-a4d2-4707696fd2b1" target="_blank" rel="noopener" aria-label="Verify Fortinet Certified Associate badge on Credly">Verify</a>
+        <a class="vf" href="https://www.credly.com/badges/872333b7-f844-4e62-a4d2-4707696fd2b1" target="_blank" rel="noopener" aria-label="Verify Fortinet Certified Associate on Credly">Verify</a>
         <span class="st">Certified</span>
       </li>
-      <li class="on">
-        <i class="led" aria-hidden="true"></i>
+      <li class="rv" style="--bc:var(--net);--bct:var(--net-t)">
+        <span class="badge" aria-hidden="true">FCF</span>
         <div class="cert-body">
           Fortinet Certified Fundamentals — Cybersecurity
           <small>Issued March 2026 · valid to March 2028 · Credly</small>
         </div>
-        <a class="vf" href="https://www.credly.com/badges/67903a66-dc22-45a6-b4f8-ad65181659f5" target="_blank" rel="noopener" aria-label="Verify Fortinet Certified Fundamentals badge on Credly">Verify</a>
+        <a class="vf" href="https://www.credly.com/badges/67903a66-dc22-45a6-b4f8-ad65181659f5" target="_blank" rel="noopener" aria-label="Verify Fortinet Certified Fundamentals on Credly">Verify</a>
         <span class="st">Certified</span>
       </li>
-      <li class="on">
-        <i class="led" aria-hidden="true"></i>
-        <div class="cert-body">Cisco Certified Network Associate (CCNA)</div>
+      <li class="rv" style="--bc:var(--sec);--bct:var(--sec-t)">
+        <span class="badge" aria-hidden="true">CCNA</span>
+        <div class="cert-body">Cisco Certified Network Associate</div>
         <span class="st">Certified</span>
       </li>
-      <li class="mid">
-        <i class="led" aria-hidden="true"></i>
+      <li class="rv" style="--bc:var(--gov);--bct:var(--gov-t)">
+        <span class="badge ghost" aria-hidden="true">NSE4</span>
         <div class="cert-body">
           Fortinet NSE 4 — Network Security Professional
           <small>Next step on the Fortinet path after FCF and FCA</small>
         </div>
         <span class="st">In progress</span>
       </li>
-      <li>
-        <i class="led" aria-hidden="true"></i>
+      <li class="rv" style="--bc:var(--dim);--bct:var(--surface-2)">
+        <span class="badge ghost" aria-hidden="true">SEC+</span>
         <div class="cert-body">CompTIA Security+</div>
         <span class="st">Planned</span>
       </li>
     </ul>
 
-    <p class="sec-note" style="margin:30px 0 12px">Training</p>
+    <p class="sec-note rv" style="margin:34px 0 14px">Training</p>
     <ul class="certs">
-      <li class="on">
-        <i class="led" aria-hidden="true"></i>
+      <li class="rv" style="--bc:var(--sys);--bct:var(--sys-t)">
+        <span class="badge" aria-hidden="true">LNX</span>
         <div class="cert-body">
           Linux Administration
           <small>Course completion · Udemy</small>
         </div>
-        <a class="vf" href="https://www.udemy.com/certificate/UC-ede67265-6e1f-4200-8e45-43c8051ea909/" target="_blank" rel="noopener" aria-label="View Linux Administration course certificate on Udemy">Verify</a>
+        <a class="vf" href="https://www.udemy.com/certificate/UC-ede67265-6e1f-4200-8e45-43c8051ea909/" target="_blank" rel="noopener" aria-label="View Linux Administration certificate on Udemy">Verify</a>
         <span class="st">Completed</span>
       </li>
     </ul>
-    <p class="sec-note" style="margin:30px 0 8px">Education</p>
-    <p style="margin:0">B.Sc. Electronics — Berhampur University, Odisha · 2018–2021</p>
-    <p class="sec-note" style="margin:22px 0 0">English (professional) · Hindi (native) · Odia (native)</p>
+
+    <p class="sec-note rv" style="margin:34px 0 8px">Education</p>
+    <p class="rv" style="margin:0">B.Sc. Electronics — Berhampur University, Odisha · 2018–2021</p>
+    <p class="sec-note rv" style="margin:22px 0 0">English (professional) · Hindi (native) · Odia (native)</p>
   </section>
 
   <!-- CONTACT -->
   <section class="unit" id="contact">
-    <div class="u-label" aria-hidden="true"><span>U07 · UPLINK</span></div>
-    <h2>Get in touch</h2>
-    <p class="sec-note">Open to senior network, infrastructure and IT security roles in Hyderabad or remote.</p>
+    <div class="u-label" aria-hidden="true"><span>U09 · UPLINK</span></div>
+    <h2 class="rv">Get in touch</h2>
+    <p class="sec-note rv">Open to senior network, infrastructure and IT security roles in Hyderabad or remote.</p>
     <div class="contact-grid">
-      <a class="cc" href="mailto:chou.satyaban123@gmail.com"><small>Email</small><span>chou.satyaban123@gmail.com</span></a>
-      <a class="cc" href="tel:+917735373892"><small>Phone</small><span>+91 77353 73892</span></a>
-      <a class="cc" href="https://linkedin.com/in/satyaban-choudhury" target="_blank" rel="noopener"><small>LinkedIn</small><span>satyaban-choudhury</span></a>
-      <a class="cc" href="Satyaban_Choudhury_Resume_Pro_Update.pdf" download><small>Résumé</small><span>Download PDF</span></a>
+      <a class="cc rv" href="mailto:chou.satyaban123@gmail.com"><small>Email</small><span>chou.satyaban123@gmail.com</span></a>
+      <a class="cc rv" href="tel:+917735373892"><small>Phone</small><span>+91 77353 73892</span></a>
+      <a class="cc rv" href="https://linkedin.com/in/satyaban-choudhury" target="_blank" rel="noopener"><small>LinkedIn</small><span>satyaban-choudhury</span></a>
+      <a class="cc rv" href="Satyaban_Choudhury_Resume_Pro_Update.pdf" download><small>Résumé</small><span>Download PDF</span></a>
     </div>
   </section>
 
@@ -566,16 +735,78 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
 
 <script>
 (function(){
-  /* ---- theme toggle ---- */
   var root = document.documentElement,
-      btn  = document.getElementById("themeBtn"),
-      lab  = document.getElementById("togLabel");
+      reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- theme switch ---- */
+  var btn = document.getElementById("themeBtn");
   btn.addEventListener("click", function(){
     var dark = root.getAttribute("data-theme") === "dark";
     root.setAttribute("data-theme", dark ? "light" : "dark");
-    lab.textContent = dark ? "Dark" : "Light";
-    btn.setAttribute("aria-pressed", String(!dark));
+    btn.setAttribute("aria-checked", String(!dark));
+    btn.setAttribute("aria-label", dark ? "Switch to dark mode" : "Switch to light mode");
+    document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#EDF1F7" : "#0B121C");
   });
+
+  /* ---- scroll progress ---- */
+  var prog = document.getElementById("prog");
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  /* ---- reveal on scroll ---- */
+  var rvs = document.querySelectorAll(".rv");
+  if (reduce || !("IntersectionObserver" in window)){
+    for (var r=0;r<rvs.length;r++) rvs[r].classList.add("in");
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e, n){
+        if (e.isIntersecting){
+          var el = e.target;
+          setTimeout(function(){ el.classList.add("in"); }, n * 70);
+          io.unobserve(el);
+        }
+      });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
+    for (var q=0;q<rvs.length;q++) io.observe(rvs[q]);
+  }
+
+  /* ---- animated counters ---- */
+  var nums = document.querySelectorAll(".stat dd");
+  function runCount(el){
+    var to = parseFloat(el.getAttribute("data-to")),
+        suf = el.getAttribute("data-suf") || "",
+        dec = (String(to).indexOf(".") > -1) ? 1 : 0;
+    if (reduce){ el.textContent = to.toFixed(dec) + suf; return; }
+    var start = null, dur = 1300;
+    function step(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1),
+          eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (to * eased).toFixed(dec) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var strip = document.querySelector(".strip");
+  if (strip && "IntersectionObserver" in window){
+    var io2 = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting){
+          var cells = strip.querySelectorAll(".stat");
+          for (var c=0;c<cells.length;c++) cells[c].classList.add("in");
+          for (var m=0;m<nums.length;m++) runCount(nums[m]);
+          io2.disconnect();
+        }
+      });
+    }, {threshold:.3});
+    io2.observe(strip);
+  } else {
+    for (var z=0;z<nums.length;z++) runCount(nums[z]);
+  }
 
   /* ---- patch panel ---- */
   var PORTS = [
@@ -584,9 +815,10 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
     ["Cisco CBS350","net"],["Aironet 1850 WLAN","net"],
     ["FortiGate 100F/80F","sec"],["Sophos XGS2100","sec"],["SSL VPN","sec"],
     ["IPsec VPN","sec"],["FortiClient EMS","sec"],["Microsoft Defender","sec"],
-    ["Bitdefender GravityZone","sec"],["Sophos DLP","sec"],["Intune MDM/MAM","sys"],["Conditional Access","sys"],
-    ["Active Directory","sys"],["Group Policy","sys"],["Windows Server 2019","sys"],
-    ["PowerShell","sys"],["SOC 2 Type II","gov"],["ISO 27001","gov"]
+    ["Bitdefender GravityZone","sec"],["Sophos DLP","sec"],
+    ["Intune MDM/MAM","sys"],["Conditional Access","sys"],["Active Directory","sys"],
+    ["Group Policy","sys"],["Windows Server 2019","sys"],["PowerShell","sys"],
+    ["SOC 2 Type II","gov"],["ISO 27001","gov"]
   ];
   var GROUPS = {
     net:["Networking","var(--p-net)"],
@@ -595,9 +827,8 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
     gov:["Compliance","var(--p-gov)"]
   };
   var panel = document.getElementById("panel"),
-      nums  = document.getElementById("panelNums"),
-      read  = document.getElementById("readout"),
-      reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      pnums = document.getElementById("panelNums"),
+      read  = document.getElementById("readout");
 
   PORTS.forEach(function(p, i){
     var g = GROUPS[p[1]];
@@ -615,7 +846,7 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
       read.innerHTML =
         '<span class="rd-port">PORT ' + String(i+1).padStart(2,"0") + '</span>' +
         '<span class="rd-name">' + p[0] + '</span>' +
-        '<span class="rd-grp" style="color:' + g[1] + '">' + g[0] + '</span>';
+        '<span class="rd-grp" style="color:' + g[1] + ';background:color-mix(in srgb,' + g[1] + ' 15%,transparent)">' + g[0] + '</span>';
     };
     b.addEventListener("mouseenter", show);
     b.addEventListener("focus", show);
@@ -624,14 +855,14 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
 
     var n = document.createElement("span");
     n.textContent = String(i+1).padStart(2,"0");
-    nums.appendChild(n);
+    pnums.appendChild(n);
   });
 
   var ports = panel.querySelectorAll(".port");
   for (var i=0;i<ports.length;i++){
     (function(el, idx){
       if (reduce) el.classList.add("live");
-      else setTimeout(function(){ el.classList.add("live"); }, 260 + idx * 55);
+      else setTimeout(function(){ el.classList.add("live"); }, 300 + idx * 55);
     })(ports[i], i);
   }
 })();
