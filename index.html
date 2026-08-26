@@ -386,9 +386,9 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
   <section class="unit" id="architecture">
     <div class="u-label" aria-hidden="true"><span>U02 · TOPOLOGY</span></div>
     <h2 class="rv">The network I run</h2>
-    <p class="sec-note rv">A simplified view of the segmented estate at SmartDocs — perimeter, core, and three VLANs.</p>
+    <p class="sec-note rv">A simplified, vendor-neutral view of the kind of segmented estate I design and operate — perimeter, core, and three VLANs.</p>
     <div class="topo rv">
-      <svg viewBox="0 0 900 400" role="img" aria-label="Network topology: internet and remote VPN users pass through a FortiGate firewall to a core switch, which segments traffic into staff, wireless and server VLANs.">
+      <svg viewBox="0 0 900 400" role="img" aria-label="Network topology: internet and remote VPN users pass through a next-generation firewall to a managed core switch, which segments traffic into staff, wireless and server VLANs, with a separate management plane.">
         <!-- links -->
         <path class="tp-line" d="M118 92 H228"/>
         <path class="tp-flow" style="stroke:var(--sec)" d="M118 92 H228"/>
@@ -421,8 +421,8 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
         <g class="tp-node">
           <rect class="tp-box" x="228" y="112" width="102" height="80" rx="6" style="stroke:var(--sec);stroke-width:2"/>
           <rect x="228" y="112" width="102" height="4" rx="2" fill="var(--sec)"/>
-          <text class="tp-t" x="279" y="140" text-anchor="middle" style="fill:var(--sec)">FORTIGATE</text>
-          <text class="tp-t" x="279" y="155" text-anchor="middle" style="fill:var(--sec)">100F / 80F</text>
+          <text class="tp-t" x="279" y="140" text-anchor="middle" style="fill:var(--sec)">FIREWALL</text>
+          <text class="tp-t" x="279" y="155" text-anchor="middle" style="fill:var(--sec)">NEXT-GEN</text>
           <text class="tp-s" x="279" y="172" text-anchor="middle">IPS · web filter</text>
           <text class="tp-cap" x="279" y="205" text-anchor="middle">PERIMETER</text>
         </g>
@@ -431,7 +431,7 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
           <rect class="tp-box" x="430" y="112" width="110" height="80" rx="6" style="stroke:var(--sys);stroke-width:2"/>
           <rect x="430" y="112" width="110" height="4" rx="2" fill="var(--sys)"/>
           <text class="tp-t" x="485" y="140" text-anchor="middle" style="fill:var(--sys)">CORE SWITCH</text>
-          <text class="tp-t" x="485" y="155" text-anchor="middle" style="fill:var(--sys)">CBS350</text>
+          <text class="tp-t" x="485" y="155" text-anchor="middle" style="fill:var(--sys)">MANAGED L3</text>
           <text class="tp-s" x="485" y="172" text-anchor="middle">802.1Q trunk</text>
           <text class="tp-cap" x="485" y="205" text-anchor="middle">CORE</text>
         </g>
@@ -446,18 +446,18 @@ h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-he
           <rect class="tp-box" x="660" y="126" width="180" height="52" rx="6"/>
           <rect x="660" y="126" width="4" height="52" rx="2" fill="var(--net)"/>
           <text class="tp-t" x="678" y="148">VLAN 20 · WIRELESS</text>
-          <text class="tp-s" x="678" y="164">Aironet 1850 · PoE</text>
+          <text class="tp-s" x="678" y="164">Wireless APs · PoE</text>
         </g>
         <g class="tp-node">
           <rect class="tp-box" x="660" y="214" width="180" height="52" rx="6"/>
           <rect x="660" y="214" width="4" height="52" rx="2" fill="var(--net)"/>
           <text class="tp-t" x="678" y="236">VLAN 30 · SERVERS</text>
-          <text class="tp-s" x="678" y="252">AD · TrueNAS · ESSL</text>
+          <text class="tp-s" x="678" y="252">Directory · NAS · biometrics</text>
         </g>
         <!-- management -->
         <g class="tp-node">
           <rect class="tp-box" x="660" y="278" width="200" height="46" rx="6" style="stroke-dasharray:4 4"/>
-          <text class="tp-t" x="678" y="298" style="fill:var(--gov)">INTUNE · DEFENDER</text>
+          <text class="tp-t" x="678" y="298" style="fill:var(--gov)">MDM · THREAT CONSOLE</text>
           <text class="tp-s" x="678" y="313">policy · posture · alerts</text>
         </g>
         <text class="tp-cap" x="760" y="348" text-anchor="middle">OUT-OF-BAND MANAGEMENT PLANE</text>
