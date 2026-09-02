@@ -1,870 +1,857 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Satyaban Choudhury — Network &amp; Infrastructure Administrator</title>
-<meta name="description" content="Senior Network &amp; Infrastructure Administrator in Hyderabad. Microsoft 365 Certified: Endpoint Administrator Associate (MD-102), Fortinet Certified Associate in Cybersecurity, CCNA. Firewalls, VPN architecture, Intune, Microsoft Defender, Active Directory and SOC 2 / ISO 27001 compliance for 200+ user environments.">
-<meta name="theme-color" content="#EDF1F7">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-/* ============ THEMES ============ */
-:root[data-theme="light"]{
-  --bg:#EDF1F7;
-  --bg-2:#E3EAF3;
-  --surface:#FFFFFF;
-  --surface-2:#F5F8FC;
-  --edge:#D3DCE7;
-  --ink:#0E1A2B;
-  --muted:#54657A;
-  --dim:#8394A6;
-  --net:#D2620F;
-  --sec:#1F5FC4;
-  --sys:#0E7A55;
-  --gov:#7E5230;
-  --net-t:rgba(210,98,15,.10);
-  --sec-t:rgba(31,95,196,.10);
-  --sys-t:rgba(14,122,85,.10);
-  --gov-t:rgba(126,82,48,.10);
-  --grid:rgba(31,95,196,.055);
-  --glow-a:rgba(31,95,196,.13);
-  --glow-b:rgba(14,122,85,.10);
-  --glow-c:rgba(210,98,15,.09);
-  --shadow:0 20px 44px -30px rgba(14,26,43,.55);
-  --shadow-lift:0 26px 50px -26px rgba(14,26,43,.42);
-  --led-off:#C4CEDA;
-}
-:root[data-theme="dark"]{
-  --bg:#0B121C;
-  --bg-2:#101A26;
-  --surface:#151F2C;
-  --surface-2:#1C2837;
-  --edge:#2A3949;
-  --ink:#E8EEF6;
-  --muted:#93A3B6;
-  --dim:#657588;
-  --net:#F0913F;
-  --sec:#5C9DF0;
-  --sys:#3FC98C;
-  --gov:#C08A5F;
-  --net-t:rgba(240,145,63,.13);
-  --sec-t:rgba(92,157,240,.13);
-  --sys-t:rgba(63,201,140,.13);
-  --gov-t:rgba(192,138,95,.13);
-  --grid:rgba(92,157,240,.07);
-  --glow-a:rgba(92,157,240,.16);
-  --glow-b:rgba(63,201,140,.12);
-  --glow-c:rgba(240,145,63,.10);
-  --shadow:0 22px 48px -28px #000;
-  --shadow-lift:0 28px 54px -24px #000;
-  --led-off:#33404F;
-}
-:root{
-  --pp-a:#243141;--pp-b:#141C26;--pp-edge:#3A4A5E;--pp-jack:#070B10;
-  --p-net:#F0913F;--p-sec:#5C9DF0;--p-sys:#3FC98C;--p-gov:#C08A5F;
-  --led-on:#22A06B;--led-mid:#C99027;
-  --display:"Saira Condensed",Impact,sans-serif;
-  --body:"IBM Plex Sans",system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,monospace;
-  --gut:76px;--maxw:1120px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  background:var(--bg);transition:background .35s,color .35s;
-}
-/* ambient atmosphere */
-.aura{position:fixed;inset:0;z-index:-2;pointer-events:none;transition:opacity .35s}
-.aura::before,.aura::after{content:"";position:absolute;border-radius:50%;filter:blur(90px)}
-.aura::before{width:60vw;height:60vw;left:-18vw;top:-22vw;background:var(--glow-a)}
-.aura::after{width:52vw;height:52vw;right:-16vw;top:34vh;background:var(--glow-b)}
-.grid-bg{
-  position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:46px 46px;
-  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 40%,transparent 100%);
-  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 40%,transparent 100%);
-}
-a{color:inherit}
-::selection{background:var(--sec);color:#fff}
-:focus-visible{outline:2px solid var(--net);outline-offset:3px;border-radius:3px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Satyaban Choudhury — Senior Network & Infrastructure Administrator specializing in enterprise networking, FortiGate firewalls, VPN, Microsoft Intune, Microsoft Defender, Active Directory, endpoint security, IT migrations and SOC 2 / ISO 27001 compliance.">
+  <meta name="theme-color" content="#f8fafc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Satyaban Choudhury — Network & Infrastructure Administrator">
+  <meta property="og:description" content="Enterprise network, infrastructure, endpoint security, migration and IT operations portfolio.">
+  <meta property="og:url" content="https://its-satyaban.github.io/">
+  <meta name="twitter:card" content="summary">
+  <title>Satyaban Choudhury — Network & Infrastructure Administrator</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Cpath d='M18 18h28v8H26v8h16v8H26v12h-8V18Z' fill='%232563eb'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Satyaban Choudhury",
+    "jobTitle":"Senior Network & Infrastructure Administrator",
+    "url":"https://its-satyaban.github.io/",
+    "sameAs":["https://linkedin.com/in/satyaban-choudhury"],
+    "email":"mailto:chou.satyaban123@gmail.com",
+    "telephone":"+91 77353 73892",
+    "address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressCountry":"IN"},
+    "knowsAbout":["Network Infrastructure","FortiGate","VPN","Microsoft Intune","Microsoft Defender","Active Directory","Endpoint Security","Windows Server","SOC 2","ISO 27001","PowerShell"]
+  }
+  </script>
+  <style>
+    :root {
+      --bg:#f8fafc;
+      --bg-soft:#f1f5f9;
+      --surface:#ffffff;
+      --surface-2:#eef4fb;
+      --ink:#0b1220;
+      --muted:#5d6b7d;
+      --subtle:#7d8a9a;
+      --line:#dbe3ec;
+      --line-strong:#c7d2df;
+      --brand:#2563eb;
+      --brand-2:#06b6d4;
+      --good:#0f9f6e;
+      --warn:#c77b19;
+      --danger:#c83f43;
+      --shadow:0 18px 45px rgba(15, 23, 42, .08);
+      --shadow-lg:0 24px 70px rgba(15, 23, 42, .12);
+      --radius:18px;
+      --max:1180px;
+      --mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --display:"IBM Plex Sans", var(--sans);
+    }
 
-/* scroll progress */
-.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;
-  background:linear-gradient(90deg,var(--sec),var(--sys) 55%,var(--net));transition:width .1s linear}
+    :root[data-theme="dark"] {
+      --bg:#08111d;
+      --bg-soft:#0e1926;
+      --surface:#101d2b;
+      --surface-2:#142334;
+      --ink:#edf4fb;
+      --muted:#a5b3c4;
+      --subtle:#77879a;
+      --line:#243447;
+      --line-strong:#34506a;
+      --brand:#60a5fa;
+      --brand-2:#22d3ee;
+      --good:#4adea8;
+      --warn:#f2b35f;
+      --danger:#f27878;
+      --shadow:0 18px 50px rgba(0,0,0,.22);
+      --shadow-lg:0 24px 75px rgba(0,0,0,.3);
+    }
 
-/* ============ RACK ============ */
-.rack{max-width:var(--maxw);margin:0 auto;position:relative}
-.unit{position:relative;border-top:1px solid var(--edge);padding:60px 28px 60px calc(var(--gut) + 28px)}
-.unit:first-of-type{border-top:0}
-.u-label{position:absolute;left:0;top:0;bottom:0;width:var(--gut);border-right:1px solid var(--edge);
-  font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--dim);padding-top:62px;text-align:center}
-.u-label span{writing-mode:vertical-rl;text-orientation:mixed;display:inline-block}
-.u-label::before,.u-label::after{content:"";position:absolute;left:50%;transform:translateX(-50%);
-  width:7px;height:7px;border-radius:50%;background:var(--surface);border:1px solid var(--edge)}
-.u-label::before{top:28px}.u-label::after{bottom:28px}
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      color:var(--ink);
+      background:var(--bg);
+      font-family:var(--sans);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      transition:background .25s ease,color .25s ease;
+    }
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-2;
+      background:
+        linear-gradient(rgba(37,99,235,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37,99,235,.035) 1px, transparent 1px);
+      background-size:48px 48px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),transparent 55%);
+    }
+    a { color:inherit; }
+    button { font:inherit; }
+    ::selection { background:var(--brand); color:#fff; }
+    :focus-visible { outline:3px solid color-mix(in srgb,var(--brand) 65%, white); outline-offset:3px; border-radius:8px; }
 
-/* ============ BAR ============ */
-.bar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 82%,transparent);
-  backdrop-filter:blur(14px);border-bottom:1px solid var(--edge)}
-.bar-in{max-width:var(--maxw);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:20px;min-height:58px}
-.bar-name{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:10px}
-.pulse{width:8px;height:8px;border-radius:50%;background:var(--sys);box-shadow:0 0 0 0 var(--sys);animation:pulse 2.4s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--sys) 60%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.bar-nav{margin-left:auto;display:flex;gap:22px;flex-wrap:wrap;align-items:center}
-.bar-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);text-decoration:none;padding:4px 0;position:relative;transition:color .18s}
-.bar-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--net);transition:right .25s}
-.bar-nav a:hover{color:var(--ink)}
-.bar-nav a:hover::after{right:0}
+    .progress { position:fixed; top:0; left:0; height:3px; width:0; z-index:1000; background:linear-gradient(90deg,var(--brand),var(--brand-2)); }
 
-/* theme switch */
-.switch{appearance:none;border:0;padding:0;background:none;cursor:pointer;line-height:0}
-.sw-track{width:56px;height:28px;border-radius:20px;border:1px solid var(--edge);background:var(--surface-2);
-  display:block;position:relative;transition:background .3s,border-color .3s}
-.switch:hover .sw-track{border-color:var(--sec)}
-.sw-knob{position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;
-  background:linear-gradient(145deg,#FDB44B,#F0913F);box-shadow:0 2px 8px rgba(240,145,63,.55);
-  transition:transform .34s cubic-bezier(.4,1.6,.5,1),background .3s,box-shadow .3s;
-  display:flex;align-items:center;justify-content:center}
-:root[data-theme="dark"] .sw-knob{transform:translateX(28px);background:linear-gradient(145deg,#C8D6EA,#8FA5C4);box-shadow:0 2px 10px rgba(143,165,196,.5)}
-.sw-knob svg{width:12px;height:12px;fill:#fff}
-.sw-knob .moon{display:none}
-:root[data-theme="dark"] .sw-knob .sun{display:none}
-:root[data-theme="dark"] .sw-knob .moon{display:block;fill:#1A2536}
+    .nav-shell {
+      position:sticky;
+      top:0;
+      z-index:100;
+      border-bottom:1px solid color-mix(in srgb,var(--line) 85%, transparent);
+      background:color-mix(in srgb,var(--bg) 86%, transparent);
+      backdrop-filter:blur(16px);
+    }
+    .nav {
+      max-width:var(--max);
+      min-height:68px;
+      margin:0 auto;
+      padding:0 22px;
+      display:flex;
+      align-items:center;
+      gap:24px;
+    }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:750; letter-spacing:.01em; white-space:nowrap; }
+    .brand-mark {
+      width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
+      color:#fff; background:var(--ink); box-shadow:0 8px 20px rgba(15,23,42,.16);
+      font-family:var(--mono); font-size:13px; font-weight:600;
+    }
+    .brand-dot { width:7px; height:7px; border-radius:50%; background:var(--good); box-shadow:0 0 0 5px color-mix(in srgb,var(--good) 12%,transparent); }
+    .nav-links { margin-left:auto; display:flex; align-items:center; gap:22px; }
+    .nav-links a { text-decoration:none; color:var(--muted); font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; }
+    .nav-links a:hover { color:var(--ink); }
+    .nav-actions { display:flex; align-items:center; gap:10px; }
+    .theme-btn,.menu-btn { border:1px solid var(--line); background:var(--surface); color:var(--ink); width:40px; height:40px; border-radius:11px; cursor:pointer; display:grid; place-items:center; }
+    .theme-btn:hover,.menu-btn:hover { border-color:var(--brand); }
+    .menu-btn { display:none; }
 
-/* ============ TYPE ============ */
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--net);
-  margin:0 0 18px;display:flex;align-items:center;gap:11px}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--net)}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(48px,9.4vw,108px);line-height:.88;
-  letter-spacing:.01em;text-transform:uppercase;margin:0 0 22px}
-h1 .l2{color:var(--ink);font-weight:700}
-h2{font-family:var(--display);font-weight:700;font-size:clamp(27px,4.2vw,42px);line-height:1;
-  letter-spacing:.03em;text-transform:uppercase;margin:0 0 10px}
-h3{font-family:var(--body);font-weight:600;font-size:18px;margin:0 0 6px;line-height:1.35}
-.sec-note{font-family:var(--mono);font-size:12px;color:var(--dim);margin:0 0 34px;letter-spacing:.04em}
-.lede{font-size:clamp(17px,2.2vw,20.5px);color:var(--muted);max-width:58ch;margin:0 0 26px}
-.lede strong{color:var(--ink);font-weight:600}
+    .container { max-width:var(--max); margin:0 auto; padding:0 22px; }
+    .hero { padding:92px 0 68px; position:relative; }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:54px; align-items:center; }
+    .eyebrow { display:flex; align-items:center; gap:10px; margin:0 0 18px; color:var(--brand); font-family:var(--mono); font-size:11px; letter-spacing:.11em; text-transform:uppercase; font-weight:600; }
+    .eyebrow::before { content:""; width:34px; height:1px; background:var(--brand); }
+    h1 { margin:0; max-width:11ch; font-family:var(--display); font-size:clamp(50px,7vw,86px); line-height:.98; letter-spacing:-.045em; }
+    .hero-lede { max-width:680px; margin:24px 0 0; font-size:19px; color:var(--muted); }
+    .hero-lede strong { color:var(--ink); font-weight:650; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:44px; padding:0 17px; border-radius:11px; border:1px solid var(--line-strong); text-decoration:none; font-size:14px; font-weight:650; transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { color:#fff; background:var(--brand); border-color:var(--brand); box-shadow:0 12px 25px rgba(37,99,235,.2); }
+    .btn-secondary { background:var(--surface); }
+    .quick-stats { display:grid; grid-template-columns:repeat(4,1fr); margin-top:34px; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow); }
+    .quick-stat { padding:18px 16px; border-right:1px solid var(--line); }
+    .quick-stat:last-child { border-right:0; }
+    .quick-stat strong { display:block; font-family:var(--display); font-size:27px; line-height:1.1; }
+    .quick-stat span { display:block; margin-top:5px; color:var(--subtle); font-family:var(--mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase; }
 
-/* creds */
-.creds{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 26px}
-.cred{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;
-  background:var(--surface);border:1px solid var(--edge);border-radius:20px;padding:7px 14px;
-  display:inline-flex;align-items:center;gap:9px;color:var(--muted);transition:.2s;box-shadow:var(--shadow)}
-.cred:hover{transform:translateY(-2px);border-color:var(--sec)}
-.cred i{width:7px;height:7px;border-radius:50%;flex:none;background:var(--sys);box-shadow:0 0 7px var(--sys)}
-.cred.ms i{background:var(--sec);box-shadow:0 0 7px var(--sec)}
-.cred.ft i{background:var(--net);box-shadow:0 0 7px var(--net)}
-.cred b{color:var(--ink);font-weight:600}
+    .hero-visual { position:relative; }
+    .terminal-card { background:linear-gradient(145deg,#0b1220,#101d2b); border:1px solid #233750; border-radius:24px; color:#dce8f6; padding:20px; box-shadow:0 28px 70px rgba(3,10,20,.25); overflow:hidden; }
+    .terminal-top { display:flex; align-items:center; gap:7px; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,.09); }
+    .terminal-top i { width:9px; height:9px; border-radius:50%; background:#42556d; }
+    .terminal-top span { margin-left:auto; color:#7f92a8; font:10px var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .terminal-body { padding:22px 4px 8px; font:12px/1.8 var(--mono); }
+    .terminal-line { display:flex; gap:10px; }
+    .terminal-line b { color:#76a8ff; font-weight:500; }
+    .terminal-line em { color:#72d5b2; font-style:normal; }
+    .terminal-line small { color:#7f92a8; }
+    .terminal-block { margin:14px 0; padding:13px 14px; border:1px solid rgba(255,255,255,.08); border-radius:13px; background:rgba(255,255,255,.025); }
+    .terminal-block strong { display:block; color:#fff; font:600 13px var(--sans); }
+    .terminal-block span { color:#93a6bb; font-size:11px; }
+    .availability { margin-top:16px; display:flex; justify-content:space-between; align-items:center; gap:14px; padding:13px 14px; border:1px solid rgba(114,213,178,.18); background:rgba(114,213,178,.06); border-radius:12px; }
+    .availability span { color:#a7b7c8; font-size:11px; }
+    .availability b { color:#72d5b2; font:600 11px var(--mono); text-transform:uppercase; letter-spacing:.07em; }
 
-.meta{display:flex;flex-wrap:wrap;gap:10px 24px;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-bottom:42px}
-.meta a{text-decoration:none;border-bottom:1px solid var(--edge);padding-bottom:2px;transition:.18s}
-.meta a:hover{color:var(--sec);border-bottom-color:var(--sec)}
+    section { scroll-margin-top:94px; }
+    .section { padding:76px 0; border-top:1px solid var(--line); }
+    .section-head { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:32px; }
+    .section-num { color:var(--brand); font:600 10px var(--mono); letter-spacing:.13em; text-transform:uppercase; margin-bottom:10px; }
+    h2 { margin:0; font-family:var(--display); font-size:clamp(32px,4vw,48px); line-height:1; letter-spacing:-.03em; }
+    .section-note { max-width:620px; margin:11px 0 0; color:var(--muted); font-size:15px; }
+    .small-note { color:var(--subtle); font:11px var(--mono); letter-spacing:.04em; }
 
-/* ============ TOPOLOGY ============ */
-.topo{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:22px 20px 14px;
-  box-shadow:var(--shadow);overflow:hidden}
-.topo svg{width:100%;height:auto;display:block;aspect-ratio:900/400}
-.tp-line{stroke:var(--edge);stroke-width:1.6;fill:none}
-.tp-flow{stroke-width:2;fill:none;stroke-dasharray:5 9;stroke-linecap:round;animation:flow 1.5s linear infinite}
-@keyframes flow{to{stroke-dashoffset:-28}}
-.tp-box{fill:var(--surface-2);stroke:var(--edge);stroke-width:1.4}
-.tp-t{font-family:var(--mono);font-size:9.5px;fill:var(--ink);letter-spacing:.06em}
-.tp-s{font-family:var(--mono);font-size:8px;fill:var(--dim);letter-spacing:.06em}
-.tp-cap{font-family:var(--mono);font-size:8px;fill:var(--dim);letter-spacing:.14em;text-transform:uppercase}
-.tp-node{transition:transform .2s}
-.tp-node:hover{transform:translateY(-2px)}
-.topo-cap{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.05em;
-  margin:12px 0 0;padding-top:12px;border-top:1px solid var(--edge)}
+    .architecture { display:grid; grid-template-columns:1.45fr .55fr; gap:20px; }
+    .diagram,.signal-card { background:var(--surface); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); }
+    .diagram { padding:18px; overflow:hidden; }
+    .diagram svg { display:block; width:100%; height:auto; min-height:320px; }
+    .diagram-caption { margin-top:14px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font:12px/1.6 var(--mono); }
+    .signal-stack { display:grid; gap:14px; }
+    .signal-card { padding:20px; }
+    .signal-card .kicker { color:var(--brand); font:600 10px var(--mono); text-transform:uppercase; letter-spacing:.11em; }
+    .signal-card strong { display:block; margin-top:9px; font-size:25px; }
+    .signal-card p { margin:7px 0 0; color:var(--muted); font-size:13px; }
 
-/* ============ PATCH PANEL ============ */
-.pp{background:linear-gradient(180deg,var(--pp-a),var(--pp-b));border:1px solid var(--pp-edge);
-  border-radius:5px;padding:16px 46px;position:relative;box-shadow:var(--shadow)}
-.pp::before,.pp::after{content:"";position:absolute;top:0;bottom:0;width:34px}
-.pp::before{left:0;border-right:1px solid var(--pp-edge)}
-.pp::after{right:0;border-left:1px solid var(--pp-edge)}
-.ear{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--pp-b);border:1px solid var(--pp-edge)}
-.ear.tl{left:12px;top:12px}.ear.bl{left:12px;bottom:12px}.ear.tr{right:12px;top:12px}.ear.br{right:12px;bottom:12px}
-.pp-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:7px}
-.port{appearance:none;border:1px solid var(--pp-edge);background:var(--pp-b);border-radius:2px 2px 3px 3px;
-  padding:0;cursor:pointer;aspect-ratio:1/1.18;position:relative;overflow:hidden;transition:transform .16s,border-color .16s}
-.port .jack{position:absolute;inset:18% 22% 30% 22%;background:var(--pp-jack);border-radius:1px;box-shadow:inset 0 0 0 1px #000}
-.port .tab{position:absolute;left:38%;right:38%;bottom:14%;height:16%;background:var(--pp-jack);border-radius:0 0 2px 2px}
-.port .led{position:absolute;top:5%;left:50%;transform:translateX(-50%);width:5px;height:3px;border-radius:1px;
-  background:#3A4552;transition:background .3s,box-shadow .3s}
-.port.live .led{background:var(--pc);box-shadow:0 0 8px var(--pc);animation:blink 3.4s infinite}
-.port.live .jack{box-shadow:inset 0 0 0 1px #000,inset 0 -14px 12px -10px var(--pc)}
-@keyframes blink{0%,88%,100%{opacity:1}92%{opacity:.25}96%{opacity:1}}
-.port:hover,.port[aria-current="true"]{transform:translateY(-4px);border-color:var(--pc)}
-.pp-num{display:grid;grid-template-columns:repeat(12,1fr);gap:7px;font-family:var(--mono);font-size:9px;
-  color:#5C6979;text-align:center;margin-top:7px;letter-spacing:.05em}
-.readout{margin-top:14px;border:1px solid var(--edge);background:var(--surface);border-radius:4px;
-  padding:13px 17px;font-family:var(--mono);font-size:13px;display:flex;gap:14px;align-items:center;
-  min-height:48px;flex-wrap:wrap;box-shadow:var(--shadow)}
-.readout .rd-port{color:var(--dim);letter-spacing:.1em;font-size:11px}
-.readout .rd-name{color:var(--ink);font-weight:500}
-.readout .rd-grp{margin-left:auto;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
-  padding:4px 10px;border-radius:20px}
-.legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;font-family:var(--mono);font-size:11px;
-  color:var(--muted);letter-spacing:.06em}
-.legend b{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:8px;vertical-align:1px}
+    .metrics { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:17px; overflow:hidden; box-shadow:var(--shadow); }
+    .metric { padding:23px 18px; background:var(--surface); }
+    .metric strong { display:block; font:700 31px/1 var(--display); color:var(--brand); }
+    .metric span { display:block; margin-top:9px; color:var(--muted); font:10.5px var(--mono); text-transform:uppercase; letter-spacing:.08em; }
 
-/* ============ STATS ============ */
-.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;
-  background:var(--edge);border:1px solid var(--edge);border-radius:5px;overflow:hidden;box-shadow:var(--shadow)}
-.stat{padding:22px;background:var(--surface);position:relative;overflow:hidden;transition:background .2s}
-.stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--sc);
-  transform:scaleY(0);transform-origin:bottom;transition:transform .4s}
-.stat.in::before{transform:scaleY(1)}
-.stat:hover{background:var(--surface-2)}
-.stat dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:9px}
-.stat dd{margin:0;font-family:var(--display);font-weight:700;font-size:36px;letter-spacing:.02em;color:var(--sc)}
+    .expertise { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .expertise-card { padding:22px; background:var(--surface); border:1px solid var(--line); border-radius:17px; box-shadow:var(--shadow); }
+    .expertise-icon { width:40px; height:40px; border-radius:11px; display:grid; place-items:center; background:var(--surface-2); color:var(--brand); margin-bottom:16px; }
+    .expertise-card h3 { margin:0; font-size:18px; }
+    .expertise-card p { margin:7px 0 0; color:var(--muted); font-size:13px; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:15px; }
+    .tag { padding:6px 8px; border:1px solid var(--line); border-radius:8px; background:var(--bg-soft); color:var(--muted); font:10.5px var(--mono); }
 
-/* ============ CASES ============ */
-.cases{display:grid;gap:18px}
-.case{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:28px;
-  position:relative;overflow:hidden;box-shadow:var(--shadow);transition:transform .28s,box-shadow .28s,border-color .28s}
-.case::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--cc),transparent)}
-.case:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--cc)}
-.case-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
-  margin-bottom:15px;display:inline-flex;align-items:center;gap:8px;color:var(--cc);
-  background:var(--cct);border-radius:20px;padding:5px 12px}
-.case-tag i{width:7px;height:7px;border-radius:50%;background:var(--cc);display:inline-block;font-style:normal}
-.case p{margin:0 0 14px;color:var(--muted);font-size:15px}
-.case b{color:var(--ink);font-weight:600}
-.case .result{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--cct);
-  border-left:3px solid var(--cc);border-radius:0 4px 4px 0;padding:12px 16px;margin:18px 0 0}
-.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
-.stack span{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;border:1px solid var(--edge);
-  border-radius:3px;padding:4px 9px;color:var(--muted);background:var(--surface-2);transition:.18s}
-.case:hover .stack span{border-color:color-mix(in srgb,var(--cc) 40%,var(--edge))}
+    .projects { display:grid; gap:18px; }
+    .project { display:grid; grid-template-columns:.9fr 1.1fr; gap:26px; align-items:stretch; padding:20px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
+    .project:nth-child(even) { grid-template-columns:1.1fr .9fr; }
+    .project:nth-child(even) .project-visual { order:2; }
+    .project-visual { min-height:265px; border-radius:15px; overflow:hidden; background:linear-gradient(145deg,#0c1624,#142335); border:1px solid #273b52; display:flex; align-items:center; justify-content:center; padding:18px; }
+    .project-visual svg { width:100%; height:auto; display:block; }
+    .project-content { display:flex; flex-direction:column; justify-content:center; padding:4px 4px 4px 0; }
+    .project-meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:12px; }
+    .project-type { padding:5px 9px; border-radius:999px; background:var(--surface-2); color:var(--brand); font:600 10px var(--mono); text-transform:uppercase; letter-spacing:.08em; }
+    .project-date { color:var(--subtle); font:10.5px var(--mono); }
+    .project h3 { margin:0; font-size:24px; line-height:1.2; letter-spacing:-.02em; }
+    .project-company { margin:7px 0 12px; color:var(--brand); font:600 12px var(--mono); }
+    .project p { margin:0; color:var(--muted); font-size:14.5px; }
+    .project-result { margin-top:16px; padding:13px 14px; border-left:3px solid var(--brand); background:var(--surface-2); color:var(--ink); border-radius:0 10px 10px 0; font-size:13px; }
+    .project-result b { font-weight:650; }
 
-/* ============ EXPERIENCE ============ */
-.jobs{position:relative;padding-left:32px}
-.jobs::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;
-  background:linear-gradient(180deg,var(--sys),var(--sec) 50%,var(--edge))}
-.job{position:relative;padding:0 0 34px}
-.job::before{content:"";position:absolute;left:-32px;top:6px;width:12px;height:12px;border-radius:50%;
-  background:var(--surface);border:2px solid var(--jc);box-shadow:0 0 0 4px var(--bg)}
-.job.now::before{background:var(--jc);box-shadow:0 0 0 4px var(--bg),0 0 12px var(--jc)}
-.job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:4px}
-.job-when{font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.04em}
-.job-now{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--sys);background:var(--sys-t);border-radius:20px;padding:3px 10px}
-.job-co{font-family:var(--mono);font-size:12.5px;color:var(--jc);margin:0 0 14px;letter-spacing:.04em}
-.job ul{margin:0;padding:0;list-style:none}
-.job li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--muted);font-size:15px}
-.job li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;border-radius:2px;background:var(--jc);opacity:.55}
+    .timeline { position:relative; margin-top:8px; padding-left:34px; }
+    .timeline::before { content:""; position:absolute; left:7px; top:8px; bottom:14px; width:2px; background:linear-gradient(var(--brand),var(--line)); }
+    .job { position:relative; padding:0 0 34px; }
+    .job::before { content:""; position:absolute; left:-34px; top:6px; width:13px; height:13px; border:3px solid var(--bg); border-radius:50%; background:var(--brand); box-shadow:0 0 0 1px var(--brand); }
+    .job-top { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline; }
+    .job h3 { margin:0; font-size:21px; }
+    .job-date { color:var(--subtle); font:11px var(--mono); }
+    .current { padding:4px 8px; border-radius:999px; background:color-mix(in srgb,var(--good) 12%,transparent); color:var(--good); font:600 9.5px var(--mono); text-transform:uppercase; letter-spacing:.08em; }
+    .job-company { margin:5px 0 12px; color:var(--brand); font:600 12px var(--mono); }
+    .job ul { margin:0; padding-left:18px; color:var(--muted); font-size:14px; }
+    .job li { margin:6px 0; }
 
-/* ============ SKILLS ============ */
-.comp{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--surface);
-  border:1px solid var(--edge);border-radius:6px;overflow:hidden;box-shadow:var(--shadow)}
-.comp th,.comp td{text-align:left;padding:16px 20px;border-top:1px solid var(--edge);vertical-align:top}
-.comp tr:first-child th,.comp tr:first-child td{border-top:0}
-.comp tr{transition:background .18s}
-.comp tr:hover{background:var(--surface-2)}
-.comp th{width:230px;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.09em;
-  text-transform:uppercase;color:var(--ink);position:relative}
-.comp th::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;background:var(--rc);border-radius:0 3px 3px 0}
-.comp td{color:var(--muted)}
+    .skills-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; }
+    .stack-table,.credentials { background:var(--surface); border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:var(--shadow); }
+    .stack-row { display:grid; grid-template-columns:200px 1fr; gap:18px; padding:17px 18px; border-top:1px solid var(--line); }
+    .stack-row:first-child { border-top:0; }
+    .stack-row h3 { margin:0; font-size:12px; font-family:var(--mono); text-transform:uppercase; letter-spacing:.06em; }
+    .stack-row p { margin:0; color:var(--muted); font-size:13px; }
+    .credentials { padding:8px; display:grid; gap:8px; }
+    .credential { display:grid; grid-template-columns:44px 1fr auto; gap:12px; align-items:center; padding:13px; border:1px solid var(--line); border-radius:13px; background:var(--bg-soft); }
+    .credential-badge { width:42px; height:42px; display:grid; place-items:center; border-radius:11px; background:var(--ink); color:#fff; font:600 10px var(--mono); }
+    .credential h3 { margin:0; font-size:13px; }
+    .credential small { display:block; margin-top:4px; color:var(--subtle); font:10px var(--mono); }
+    .verify { text-decoration:none; padding:7px 9px; border:1px solid var(--line); border-radius:8px; font:600 9.5px var(--mono); text-transform:uppercase; letter-spacing:.06em; color:var(--brand); }
 
-/* ============ CERTS ============ */
-.certs{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.certs li{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:18px 20px;
-  display:flex;align-items:center;gap:16px;font-size:15px;flex-wrap:wrap;box-shadow:var(--shadow);transition:.24s}
-.certs li:hover{transform:translateX(4px);border-color:var(--bc)}
-.badge{width:42px;height:42px;border-radius:8px;flex:none;display:grid;place-items:center;
-  font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.04em;color:#fff;background:var(--bc)}
-.badge.ghost{background:var(--surface-2);color:var(--dim);border:1px dashed var(--edge)}
-.cert-body{flex:1 1 240px;min-width:0}
-.cert-body small{display:block;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em;margin-top:4px}
-.vf{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;
-  text-decoration:none;white-space:nowrap;background:var(--bc);border-radius:4px;padding:8px 14px;
-  display:inline-flex;align-items:center;gap:7px;transition:.2s;opacity:.92}
-.vf:hover{opacity:1;transform:translateY(-2px);box-shadow:0 8px 18px -8px var(--bc)}
-.vf::after{content:"↗";font-size:11px;line-height:1}
-.st{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--bc);background:var(--bct);border-radius:20px;padding:5px 11px;white-space:nowrap}
+    .bottom-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .panel { padding:24px; border:1px solid var(--line); background:var(--surface); border-radius:18px; box-shadow:var(--shadow); }
+    .panel h3 { margin:0; font-size:21px; }
+    .panel p { color:var(--muted); font-size:13.5px; }
+    .education { margin-top:18px; padding-top:18px; border-top:1px solid var(--line); }
+    .education strong { display:block; font-size:14px; }
+    .education span { display:block; margin-top:3px; color:var(--subtle); font:11px var(--mono); }
+    .contact-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px; }
+    .contact-link { min-height:90px; padding:18px; border:1px solid var(--line); border-radius:14px; background:var(--bg-soft); text-decoration:none; transition:transform .18s ease,border-color .18s ease; }
+    .contact-link:hover { transform:translateY(-2px); border-color:var(--brand); }
+    .contact-link small { display:block; color:var(--subtle); font:600 10px var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .contact-link span { display:block; margin-top:7px; overflow-wrap:anywhere; font-size:14px; }
 
-/* ============ CONTACT ============ */
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.cc{background:var(--surface);border:1px solid var(--edge);border-radius:6px;padding:24px;
-  text-decoration:none;display:block;box-shadow:var(--shadow);transition:.26s;position:relative;overflow:hidden}
-.cc::after{content:"→";position:absolute;right:20px;bottom:20px;font-family:var(--mono);
-  color:var(--dim);transition:.26s}
-.cc:hover{transform:translateY(-4px);border-color:var(--sec);box-shadow:var(--shadow-lift)}
-.cc:hover::after{color:var(--sec);transform:translateX(4px)}
-.cc small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
-.cc span{font-size:15.5px;word-break:break-word}
-.foot{border-top:1px solid var(--edge);padding:26px 28px 26px calc(var(--gut) + 28px);
-  font-family:var(--mono);font-size:11.5px;color:var(--dim);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    footer { border-top:1px solid var(--line); padding:26px 0 34px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:18px; color:var(--subtle); font:11px var(--mono); }
 
-/* ============ MOTION ============ */
-.rv{opacity:0;transition:opacity .7s cubic-bezier(.2,.7,.3,1)}
-.rv.in{opacity:1}
-@keyframes wake{from{opacity:.2}to{opacity:1}}
-.port{animation:wake .5s backwards}
+    .reveal { opacity:1; transform:none; }
+    .js .reveal { opacity:0; transform:translateY(16px); transition:opacity .6s ease,transform .6s ease; }
+    .js .reveal.is-visible { opacity:1; transform:none; }
 
-@media (max-width:880px){
-  :root{--gut:0px}
-  .unit{padding:46px 20px}
-  .u-label{display:none}
-  .foot{padding-left:20px;padding-right:20px}
-  .pp{padding:14px 16px}
-  .pp::before,.pp::after,.ear{display:none}
-  .pp-grid,.pp-num{grid-template-columns:repeat(6,1fr)}
-  .comp th{width:auto;display:block;padding:14px 20px 4px;border-top:0}
-  .comp td{display:block;padding:0 20px 14px;border-top:0}
-  .comp tr{display:block;border-top:1px solid var(--edge)}
-  .comp tr:first-child{border-top:0}
-  .comp th::before{top:14px;bottom:auto;height:14px}
-  .bar-nav a{display:none}
-  .topo{padding:14px 10px 10px}
-}
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto}
-  .rv{opacity:1;transform:none}
-  .prog{display:none}
-}
-</style>
+    @media (max-width:1000px) {
+      .nav-links { display:none; position:absolute; top:68px; left:0; right:0; padding:15px 22px 18px; background:var(--bg); border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; gap:15px; }
+      .nav-shell.menu-open .nav-links { display:flex; }
+      .menu-btn { display:grid; }
+      .hero-grid,.architecture,.skills-grid { grid-template-columns:1fr; }
+      .hero-visual { max-width:650px; }
+      .metrics { grid-template-columns:repeat(3,1fr); }
+      .expertise { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:760px) {
+      .nav { padding:0 16px; }
+      .container { padding:0 16px; }
+      .hero { padding:65px 0 46px; }
+      h1 { max-width:12ch; font-size:clamp(44px,14vw,68px); }
+      .hero-lede { font-size:17px; }
+      .quick-stats { grid-template-columns:repeat(2,1fr); }
+      .quick-stat:nth-child(2) { border-right:0; }
+      .quick-stat:nth-child(-n+2) { border-bottom:1px solid var(--line); }
+      .quick-stat { padding:15px; }
+      .quick-stat strong { font-size:23px; }
+      .section { padding:58px 0; }
+      .section-head { display:block; }
+      .small-note { display:block; margin-top:14px; }
+      .metrics { grid-template-columns:repeat(2,1fr); }
+      .metric { padding:19px 15px; }
+      .metric:last-child { grid-column:span 2; }
+      .project,.project:nth-child(even) { grid-template-columns:1fr; }
+      .project:nth-child(even) .project-visual { order:0; }
+      .project-visual { min-height:210px; }
+      .stack-row { grid-template-columns:1fr; gap:7px; }
+      .bottom-grid { grid-template-columns:1fr; }
+      .contact-grid { grid-template-columns:1fr; }
+      .credential { grid-template-columns:42px 1fr; }
+      .verify { grid-column:2; justify-self:start; }
+      .footer-inner { flex-direction:column; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { animation:none!important; transition:none!important; }
+      .js .reveal { opacity:1; transform:none; }
+    }
+  </style>
 </head>
 <body>
-<div class="aura" aria-hidden="true"></div>
-<div class="grid-bg" aria-hidden="true"></div>
-<div class="prog" id="prog" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-<header class="bar">
-  <div class="bar-in">
-    <div class="bar-name"><i class="pulse" aria-hidden="true"></i>Satyaban Choudhury</div>
-    <nav class="bar-nav" aria-label="Sections">
-      <a href="#architecture">Architecture</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-      <button class="switch" id="themeBtn" role="switch" aria-checked="false" aria-label="Switch to dark mode">
-        <span class="sw-track"><span class="sw-knob">
-          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13.5a1 1 0 0 1 1 1V6a1 1 0 1 1-2 0V4.5a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1V21a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1zM21 11a1 1 0 1 1 0 2h-1.5a1 1 0 1 1 0-2H21zM4.5 11a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h1.5zm13.8-5.3a1 1 0 0 1 0 1.4l-1 1.1a1 1 0 0 1-1.5-1.5l1.1-1a1 1 0 0 1 1.4 0zM7.2 16.8a1 1 0 0 1 0 1.4l-1.1 1a1 1 0 0 1-1.4-1.4l1-1.1a1 1 0 0 1 1.5 0zm11.1 1.4a1 1 0 0 1-1.4 0l-1.1-1a1 1 0 0 1 1.5-1.5l1 1.1a1 1 0 0 1 0 1.4zM5.7 5.7a1 1 0 0 1 1.5 0l1 1.1a1 1 0 1 1-1.4 1.4l-1.1-1a1 1 0 0 1 0-1.5z"/></svg>
-          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 13.2A9 9 0 0 1 10.8 3a9 9 0 1 0 10.2 10.2z"/></svg>
-        </span></span>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<main class="rack">
-
-  <!-- HERO -->
-  <section class="unit" id="top">
-    <div class="u-label" aria-hidden="true"><span>U01 · IDENT</span></div>
-    <p class="eyebrow rv">Senior Network &amp; Infrastructure Administrator</p>
-    <h1 class="rv">Satyaban<br><span class="l2">Choudhury</span></h1>
-    <p class="lede rv">I keep enterprise networks up. Three years running firewalls, VPN, Active Directory and managed endpoints for organisations of <strong>200+ users</strong> — and the audit paperwork that has to survive a SOC 2 review afterwards.</p>
-    <div class="creds rv">
-      <span class="cred ms"><i aria-hidden="true"></i>Microsoft 365 Certified: <b>Endpoint Administrator (MD-102)</b></span>
-      <span class="cred ft"><i aria-hidden="true"></i>Fortinet Certified Associate: <b>Cybersecurity</b></span>
-      <span class="cred"><i aria-hidden="true"></i><b>CCNA</b></span>
-    </div>
-    <div class="meta rv">
-      <span>Hyderabad, India</span>
-      <a href="mailto:chou.satyaban123@gmail.com">chou.satyaban123@gmail.com</a>
-      <a href="tel:+917735373892">+91 77353 73892</a>
-      <a href="https://linkedin.com/in/satyaban-choudhury" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="satyaban-choudhury-resume.pdf" download>Download résumé (PDF)</a>
-    </div>
-  </section>
-
-  <!-- ARCHITECTURE -->
-  <section class="unit" id="architecture">
-    <div class="u-label" aria-hidden="true"><span>U02 · TOPOLOGY</span></div>
-    <h2 class="rv">The network I run</h2>
-    <p class="sec-note rv">A simplified, vendor-neutral view of the kind of segmented estate I design and operate — perimeter, core, and three VLANs.</p>
-    <div class="topo rv">
-      <svg viewBox="0 0 900 400" role="img" aria-label="Network topology: internet and remote VPN users pass through a next-generation firewall to a managed core switch, which segments traffic into staff, wireless and server VLANs, with a separate management plane.">
-        <!-- links -->
-        <path class="tp-line" d="M118 92 H228"/>
-        <path class="tp-flow" style="stroke:var(--sec)" d="M118 92 H228"/>
-        <path class="tp-line" d="M118 212 H228"/>
-        <path class="tp-flow" style="stroke:var(--sec);animation-delay:.5s" d="M118 212 H228"/>
-        <path class="tp-line" d="M330 152 H430"/>
-        <path class="tp-flow" style="stroke:var(--sys)" d="M330 152 H430"/>
-        <path class="tp-line" d="M540 152 C600 152 600 78 660 78"/>
-        <path class="tp-flow" style="stroke:var(--net)" d="M540 152 C600 152 600 78 660 78"/>
-        <path class="tp-line" d="M540 152 H660"/>
-        <path class="tp-flow" style="stroke:var(--net);animation-delay:.35s" d="M540 152 H660"/>
-        <path class="tp-line" d="M540 152 C600 152 600 240 660 240"/>
-        <path class="tp-flow" style="stroke:var(--net);animation-delay:.7s" d="M540 152 C600 152 600 240 660 240"/>
-        <path class="tp-line" d="M760 300 V330 H500 V196"/>
-        <path class="tp-flow" style="stroke:var(--gov);animation-delay:.2s" d="M760 300 V330 H500 V196"/>
-
-        <!-- internet -->
-        <g class="tp-node">
-          <rect class="tp-box" x="14" y="66" width="104" height="52" rx="6"/>
-          <text class="tp-t" x="66" y="88" text-anchor="middle">INTERNET</text>
-          <text class="tp-s" x="66" y="103" text-anchor="middle">WAN uplink</text>
-        </g>
-        <!-- remote users -->
-        <g class="tp-node">
-          <rect class="tp-box" x="14" y="186" width="104" height="52" rx="6"/>
-          <text class="tp-t" x="66" y="208" text-anchor="middle">REMOTE 100+</text>
-          <text class="tp-s" x="66" y="223" text-anchor="middle">SSL / IPsec VPN</text>
-        </g>
-        <!-- firewall -->
-        <g class="tp-node">
-          <rect class="tp-box" x="228" y="112" width="102" height="80" rx="6" style="stroke:var(--sec);stroke-width:2"/>
-          <rect x="228" y="112" width="102" height="4" rx="2" fill="var(--sec)"/>
-          <text class="tp-t" x="279" y="140" text-anchor="middle" style="fill:var(--sec)">FIREWALL</text>
-          <text class="tp-t" x="279" y="155" text-anchor="middle" style="fill:var(--sec)">NEXT-GEN</text>
-          <text class="tp-s" x="279" y="172" text-anchor="middle">IPS · web filter</text>
-          <text class="tp-cap" x="279" y="205" text-anchor="middle">PERIMETER</text>
-        </g>
-        <!-- core switch -->
-        <g class="tp-node">
-          <rect class="tp-box" x="430" y="112" width="110" height="80" rx="6" style="stroke:var(--sys);stroke-width:2"/>
-          <rect x="430" y="112" width="110" height="4" rx="2" fill="var(--sys)"/>
-          <text class="tp-t" x="485" y="140" text-anchor="middle" style="fill:var(--sys)">CORE SWITCH</text>
-          <text class="tp-t" x="485" y="155" text-anchor="middle" style="fill:var(--sys)">MANAGED L3</text>
-          <text class="tp-s" x="485" y="172" text-anchor="middle">802.1Q trunk</text>
-          <text class="tp-cap" x="485" y="205" text-anchor="middle">CORE</text>
-        </g>
-        <!-- vlans -->
-        <g class="tp-node">
-          <rect class="tp-box" x="660" y="52" width="180" height="52" rx="6"/>
-          <rect x="660" y="52" width="4" height="52" rx="2" fill="var(--net)"/>
-          <text class="tp-t" x="678" y="74">VLAN 10 · STAFF</text>
-          <text class="tp-s" x="678" y="90">200+ managed endpoints</text>
-        </g>
-        <g class="tp-node">
-          <rect class="tp-box" x="660" y="126" width="180" height="52" rx="6"/>
-          <rect x="660" y="126" width="4" height="52" rx="2" fill="var(--net)"/>
-          <text class="tp-t" x="678" y="148">VLAN 20 · WIRELESS</text>
-          <text class="tp-s" x="678" y="164">Wireless APs · PoE</text>
-        </g>
-        <g class="tp-node">
-          <rect class="tp-box" x="660" y="214" width="180" height="52" rx="6"/>
-          <rect x="660" y="214" width="4" height="52" rx="2" fill="var(--net)"/>
-          <text class="tp-t" x="678" y="236">VLAN 30 · SERVERS</text>
-          <text class="tp-s" x="678" y="252">Directory · NAS · biometrics</text>
-        </g>
-        <!-- management -->
-        <g class="tp-node">
-          <rect class="tp-box" x="660" y="278" width="200" height="46" rx="6" style="stroke-dasharray:4 4"/>
-          <text class="tp-t" x="678" y="298" style="fill:var(--gov)">MDM · THREAT CONSOLE</text>
-          <text class="tp-s" x="678" y="313">policy · posture · alerts</text>
-        </g>
-        <text class="tp-cap" x="760" y="348" text-anchor="middle">OUT-OF-BAND MANAGEMENT PLANE</text>
-      </svg>
-      <p class="topo-cap">Traffic is inspected at the perimeter, trunked to the core, then segmented so a compromised endpoint in one VLAN cannot reach another. Uptime held at 99.5%+.</p>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="unit">
-    <div class="u-label" aria-hidden="true"><span>U03 · STATUS</span></div>
-    <dl class="strip rv">
-      <div class="stat" style="--sc:var(--sys)"><dt>Uptime SLA held</dt><dd data-to="99.5" data-suf="%">0%</dd></div>
-      <div class="stat" style="--sc:var(--sec)"><dt>Users supported</dt><dd data-to="200" data-suf="+">0</dd></div>
-      <div class="stat" style="--sc:var(--net)"><dt>AD objects managed</dt><dd data-to="500" data-suf="+">0</dd></div>
-      <div class="stat" style="--sc:var(--gov)"><dt>Downtime reduced</dt><dd data-to="30" data-suf="%">0%</dd></div>
-      <div class="stat" style="--sc:var(--sec)"><dt>Concurrent VPN</dt><dd data-to="100" data-suf="+">0</dd></div>
-    </dl>
-  </section>
-
-  <!-- SKILLS PANEL -->
-  <section class="unit">
-    <div class="u-label" aria-hidden="true"><span>U04 · PORTS</span></div>
-    <h2 class="rv">What's patched in</h2>
-    <p class="sec-note rv">Twenty-four ports, colour-coded to the T568B cable standard. Hover or tap one.</p>
-    <div class="rv">
-      <div class="pp">
-        <i class="ear tl" aria-hidden="true"></i><i class="ear bl" aria-hidden="true"></i>
-        <i class="ear tr" aria-hidden="true"></i><i class="ear br" aria-hidden="true"></i>
-        <div class="pp-grid" id="panel" role="group" aria-label="Skills patch panel — select a port to read its label"></div>
-        <div class="pp-num" id="panelNums" aria-hidden="true"></div>
+  <header class="nav-shell" id="navShell">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Satyaban Choudhury home">
+        <span class="brand-mark">SC</span>
+        <span>Satyaban Choudhury</span>
+        <span class="brand-dot" aria-hidden="true"></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#architecture">Architecture</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Expertise</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary nav-resume" href="satyaban-choudhury-resume.pdf" download>Résumé ↓</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch theme">
+          <svg class="sun-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="moon-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
-      <div class="readout" id="readout" role="status" aria-live="polite">
-        <span class="rd-port">PORT —</span>
-        <span class="rd-name">Select a port to read what is patched into it</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="eyebrow">Senior Network &amp; Infrastructure Administrator</p>
+          <h1>Infrastructure that stays secure, available and manageable.</h1>
+          <p class="hero-lede">I design, secure and operate enterprise network, server and endpoint environments across <strong>200+ user estates</strong> — from FortiGate firewalls and VPN architecture to Microsoft Intune, Defender, Active Directory and audit-ready IT operations.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View selected projects ↗</a>
+            <a class="btn btn-secondary" href="satyaban-choudhury-resume.pdf" download>Download résumé ↓</a>
+          </div>
+          <div class="quick-stats" aria-label="Career highlights">
+            <div class="quick-stat"><strong>200+</strong><span>Users supported</span></div>
+            <div class="quick-stat"><strong>100+</strong><span>Concurrent VPN</span></div>
+            <div class="quick-stat"><strong>99.5%+</strong><span>Uptime SLA</span></div>
+            <div class="quick-stat"><strong>500+</strong><span>AD objects</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Professional profile overview">
+          <div class="terminal-card">
+            <div class="terminal-top"><i></i><i></i><i></i><span>infrastructure.profile</span></div>
+            <div class="terminal-body">
+              <div class="terminal-line"><b>role</b><small>=</small><em>"Senior Network &amp; Infrastructure Administrator"</em></div>
+              <div class="terminal-line"><b>focus</b><small>=</small><em>"Network · Security · Endpoint · Operations"</em></div>
+              <div class="terminal-block"><strong>Primary platforms</strong><span>FortiGate · Cisco CBS350 · Aironet 1850 · Intune · Defender · Active Directory</span></div>
+              <div class="terminal-block"><strong>Operational focus</strong><span>Availability · Secure remote access · Migrations · Automation · Governance</span></div>
+              <div class="availability"><span>Based in Hyderabad · Open to senior network, infrastructure &amp; IT security roles</span><b>Available</b></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="legend">
-        <span><b style="background:var(--p-net)"></b>Networking</span>
-        <span><b style="background:var(--p-sec)"></b>Firewall &amp; Security</span>
-        <span><b style="background:var(--p-sys)"></b>Servers &amp; Cloud</span>
-        <span><b style="background:var(--p-gov)"></b>Compliance &amp; Governance</span>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-num">01 · Architecture</div>
+            <h2>Infrastructure architecture</h2>
+            <p class="section-note">A simplified, vendor-aware view of the environments I design and operate: perimeter security, core switching, segmented LAN/WLAN, servers and endpoint management.</p>
+          </div>
+          <div class="small-note">Security at the edge · segmentation at the core</div>
+        </div>
+        <div class="architecture">
+          <div class="diagram reveal">
+            <svg viewBox="0 0 900 420" role="img" aria-label="Simplified network architecture with Internet and VPN users connecting through FortiGate to a Cisco CBS350 core switch, then segmented staff, wireless and server networks with endpoint management.">
+              <defs>
+                <linearGradient id="flowBlue" x1="0" x2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+                <filter id="softGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <rect x="0" y="0" width="900" height="420" rx="16" fill="#0b1220"/>
+              <g font-family="Inter,Arial,sans-serif">
+                <text x="36" y="40" fill="#7f92a8" font-size="11" letter-spacing="2">PERIMETER</text>
+                <text x="334" y="40" fill="#7f92a8" font-size="11" letter-spacing="2">CORE</text>
+                <text x="634" y="40" fill="#7f92a8" font-size="11" letter-spacing="2">SEGMENTED ESTATE</text>
+
+                <g stroke="#31445c" stroke-width="2" fill="none">
+                  <path d="M132 110 H255"/>
+                  <path d="M132 255 H255"/>
+                  <path d="M390 182 H500"/>
+                  <path d="M610 182 C655 182 655 95 704 95"/>
+                  <path d="M610 182 H704"/>
+                  <path d="M610 182 C655 182 655 270 704 270"/>
+                  <path d="M785 314 V360 H555 V235"/>
+                </g>
+                <g stroke="url(#flowBlue)" stroke-width="2.6" fill="none" filter="url(#softGlow)" opacity=".9">
+                  <path d="M132 110 H255"/>
+                  <path d="M132 255 H255"/>
+                  <path d="M390 182 H500"/>
+                  <path d="M610 182 C655 182 655 95 704 95"/>
+                  <path d="M610 182 H704"/>
+                  <path d="M610 182 C655 182 655 270 704 270"/>
+                </g>
+
+                <g>
+                  <rect x="22" y="80" width="110" height="60" rx="10" fill="#111d2b" stroke="#3d5876"/>
+                  <text x="77" y="106" text-anchor="middle" fill="#edf4fb" font-size="13" font-weight="650">INTERNET</text>
+                  <text x="77" y="125" text-anchor="middle" fill="#7f92a8" font-size="10">WAN uplink</text>
+
+                  <rect x="22" y="225" width="110" height="60" rx="10" fill="#111d2b" stroke="#3d5876"/>
+                  <text x="77" y="251" text-anchor="middle" fill="#edf4fb" font-size="13" font-weight="650">REMOTE USERS</text>
+                  <text x="77" y="270" text-anchor="middle" fill="#7f92a8" font-size="10">SSL / IPsec VPN</text>
+
+                  <rect x="255" y="135" width="135" height="98" rx="12" fill="#122236" stroke="#5b9bf3" stroke-width="2"/>
+                  <text x="322" y="168" text-anchor="middle" fill="#76a8ff" font-size="14" font-weight="700">FORTIGATE</text>
+                  <text x="322" y="188" text-anchor="middle" fill="#edf4fb" font-size="12">100F / 80F</text>
+                  <text x="322" y="210" text-anchor="middle" fill="#7f92a8" font-size="10">Firewall · VPN · filtering</text>
+
+                  <rect x="500" y="135" width="110" height="98" rx="12" fill="#122b2d" stroke="#4cbf9f" stroke-width="2"/>
+                  <text x="555" y="168" text-anchor="middle" fill="#72d5b2" font-size="13" font-weight="700">CBS350</text>
+                  <text x="555" y="188" text-anchor="middle" fill="#edf4fb" font-size="12">CORE SWITCH</text>
+                  <text x="555" y="210" text-anchor="middle" fill="#7f92a8" font-size="10">L3 · 802.1Q</text>
+
+                  <rect x="704" y="62" width="170" height="66" rx="11" fill="#111d2b" stroke="#3d5876"/>
+                  <text x="722" y="88" fill="#edf4fb" font-size="12" font-weight="650">STAFF NETWORK</text>
+                  <text x="722" y="108" fill="#7f92a8" font-size="10">200+ managed endpoints</text>
+
+                  <rect x="704" y="149" width="170" height="66" rx="11" fill="#111d2b" stroke="#3d5876"/>
+                  <text x="722" y="175" fill="#edf4fb" font-size="12" font-weight="650">WIRELESS</text>
+                  <text x="722" y="195" fill="#7f92a8" font-size="10">Aironet 1850 · PoE</text>
+
+                  <rect x="704" y="236" width="170" height="66" rx="11" fill="#111d2b" stroke="#3d5876"/>
+                  <text x="722" y="262" fill="#edf4fb" font-size="12" font-weight="650">SERVER NETWORK</text>
+                  <text x="722" y="282" fill="#7f92a8" font-size="10">AD · Windows Server · storage</text>
+
+                  <rect x="575" y="338" width="190" height="50" rx="10" fill="#111d2b" stroke="#48617d" stroke-dasharray="5 5"/>
+                  <text x="670" y="360" text-anchor="middle" fill="#edf4fb" font-size="11" font-weight="650">INTUNE · DEFENDER</text>
+                  <text x="670" y="377" text-anchor="middle" fill="#7f92a8" font-size="9">policy · posture · response</text>
+                </g>
+              </g>
+            </svg>
+            <div class="diagram-caption">Traffic is inspected at the perimeter, then segmented through the core to reduce lateral movement and keep infrastructure, wireless and user networks manageable.</div>
+          </div>
+          <div class="signal-stack">
+            <div class="signal-card reveal"><div class="kicker">Availability</div><strong>99.5%+</strong><p>Business-critical uptime SLA maintained in the current environment.</p></div>
+            <div class="signal-card reveal"><div class="kicker">Remote access</div><strong>100+</strong><p>Concurrent VPN users supported across distributed sites.</p></div>
+            <div class="signal-card reveal"><div class="kicker">Directory</div><strong>500+</strong><p>Active Directory objects managed for identity and access operations.</p></div>
+          </div>
+        </div>
       </div>
-      <noscript>
-        <p style="font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:16px">
-          Networking: OSPF, EIGRP, VLAN, VTP, STP, DNS, DHCP, Cisco CBS350, Aironet 1850 ·
-          Security: FortiGate 100F/80F, Sophos XGS2100, SSL VPN, IPsec VPN, Microsoft Defender, Bitdefender GravityZone, Sophos DLP, FortiClient EMS ·
-          Servers &amp; Cloud: Windows Server 2019, Active Directory, Group Policy, Intune, Conditional Access, PowerShell ·
-          Governance: SOC 2 Type II, ISO 27001.
-        </p>
-      </noscript>
+    </section>
+
+    <section class="section" aria-label="Career metrics">
+      <div class="container">
+        <div class="metrics reveal">
+          <div class="metric"><strong>200+</strong><span>Users supported</span></div>
+          <div class="metric"><strong>150+</strong><span>Windows 11 endpoints migrated</span></div>
+          <div class="metric"><strong>99.5%+</strong><span>Uptime SLA</span></div>
+          <div class="metric"><strong>30%</strong><span>Downtime reduction</span></div>
+          <div class="metric"><strong>75%</strong><span>SLA adherence improvement</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-num">02 · Projects</div>
+            <h2>Selected infrastructure projects</h2>
+            <p class="section-note">Projects spanning office migration, email migration, endpoint management, security platform changes and network operations.</p>
+          </div>
+          <div class="small-note">Challenge · execution · outcome</div>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project-visual">
+              <svg viewBox="0 0 560 320" role="img" aria-label="Office relocation migration flow from old facility through secure transport and staging to new facility go-live.">
+                <rect width="560" height="320" rx="16" fill="#0b1220"/>
+                <g font-family="Inter,Arial,sans-serif">
+                  <text x="28" y="36" fill="#7f92a8" font-size="10" letter-spacing="2">OFFICE RELOCATION · WEEKEND CUTOVER</text>
+                  <g stroke="#40607f" stroke-width="2" fill="none"><path d="M150 135 H205"/><path d="M355 135 H410"/></g>
+                  <g fill="#122236" stroke="#4f78a6">
+                    <rect x="28" y="90" width="122" height="92" rx="12"/>
+                    <rect x="205" y="90" width="150" height="92" rx="12"/>
+                    <rect x="410" y="90" width="122" height="92" rx="12"/>
+                  </g>
+                  <text x="89" y="121" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">OLD OFFICE</text>
+                  <text x="89" y="143" text-anchor="middle" fill="#93a6bb" font-size="10">asset tagging</text><text x="89" y="160" text-anchor="middle" fill="#93a6bb" font-size="10">shutdown &amp; pack</text>
+                  <text x="280" y="120" text-anchor="middle" fill="#76a8ff" font-size="12" font-weight="700">SECURE TRANSFER</text>
+                  <text x="280" y="143" text-anchor="middle" fill="#93a6bb" font-size="10">server rack + UPS</text><text x="280" y="160" text-anchor="middle" fill="#93a6bb" font-size="10">transport + reassembly</text>
+                  <text x="471" y="121" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">NEW OFFICE</text>
+                  <text x="471" y="143" text-anchor="middle" fill="#93a6bb" font-size="10">network + Wi-Fi</text><text x="471" y="160" text-anchor="middle" fill="#93a6bb" font-size="10">workstations + go-live</text>
+                  <rect x="106" y="224" width="348" height="45" rx="11" fill="#10251f" stroke="#2b8b6e"/>
+                  <text x="280" y="244" text-anchor="middle" fill="#72d5b2" font-size="11" font-weight="700">150+ USERS · ZERO BUSINESS-HOUR DOWNTIME</text>
+                  <text x="280" y="260" text-anchor="middle" fill="#93a6bb" font-size="9">Jan–Mar 2026 · SmartDocs Business Solutions</text>
+                </g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">Infrastructure migration</span><span class="project-date">Jan 2026 – Mar 2026</span></div>
+              <h3>Corporate Office Building Relocation — End-to-End IT Infrastructure Migration</h3>
+              <div class="project-company">SmartDocs Business Solutions · Offsite</div>
+              <p>Led the complete IT infrastructure migration during a corporate office shift for 150+ users, executed over a weekend to achieve zero business-hour downtime. Managed planning, asset tagging, physical relocation and go-live validation.</p>
+              <div class="project-result"><b>Scope:</b> server-room relocation, Windows Server 2019 and ESSL systems, UPS and rack reassembly, Cat6 structured cabling, patch panels, Cisco CBS350 switching, Aironet 1850 wireless, TP-Link PoE, FortiGate 100F, site-to-site IPsec VPN and 150+ workstation setup.</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual">
+              <svg viewBox="0 0 560 320" role="img" aria-label="Email migration flow from Google GSuite to Zoho Mail and Microsoft 365.">
+                <rect width="560" height="320" rx="16" fill="#0b1220"/>
+                <g font-family="Inter,Arial,sans-serif">
+                  <text x="28" y="36" fill="#7f92a8" font-size="10" letter-spacing="2">EMAIL PLATFORM MIGRATION</text>
+                  <rect x="30" y="91" width="118" height="92" rx="12" fill="#122236" stroke="#4f78a6"/>
+                  <rect x="221" y="70" width="118" height="68" rx="12" fill="#12251f" stroke="#39a97b"/>
+                  <rect x="221" y="166" width="118" height="68" rx="12" fill="#122236" stroke="#5b9bf3"/>
+                  <rect x="412" y="91" width="118" height="92" rx="12" fill="#122236" stroke="#4f78a6"/>
+                  <g stroke="#507196" stroke-width="2"><path d="M148 137 H221"/><path d="M339 104 H412"/><path d="M339 200 H412"/></g>
+                  <text x="89" y="122" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">GOOGLE GSUITE</text><text x="89" y="144" text-anchor="middle" fill="#93a6bb" font-size="10">source environment</text><text x="89" y="161" text-anchor="middle" fill="#93a6bb" font-size="9">700+ employees</text>
+                  <text x="280" y="99" text-anchor="middle" fill="#72d5b2" font-size="11" font-weight="700">ZOHO MAIL</text><text x="280" y="119" text-anchor="middle" fill="#93a6bb" font-size="9">mail + collaboration</text>
+                  <text x="280" y="195" text-anchor="middle" fill="#76a8ff" font-size="11" font-weight="700">MICROSOFT 365</text><text x="280" y="215" text-anchor="middle" fill="#93a6bb" font-size="9">identity + collaboration</text>
+                  <text x="471" y="122" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">GO-LIVE</text><text x="471" y="144" text-anchor="middle" fill="#93a6bb" font-size="10">DNS + security</text><text x="471" y="161" text-anchor="middle" fill="#93a6bb" font-size="9">user adoption</text>
+                  <rect x="73" y="246" width="414" height="42" rx="11" fill="#111d2b" stroke="#38546f"/>
+                  <text x="280" y="264" text-anchor="middle" fill="#edf4fb" font-size="10" font-weight="650">MX · SPF · DKIM · DMARC · DOCUMENTATION · TRAINING</text>
+                  <text x="280" y="279" text-anchor="middle" fill="#7f92a8" font-size="8.5">Jul–Oct 2024 · Hearing Solutions</text>
+                </g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">Cloud / email migration</span><span class="project-date">Jul 2024 – Oct 2024</span></div>
+              <h3>Zoho Migration — Google GSuite to Zoho Mail &amp; Microsoft 365</h3>
+              <div class="project-company">Hearing Solutions · Hyderabad · Onsite</div>
+              <p>Led the end-to-end email infrastructure migration for 700+ employees. Planned a phased migration strategy, maintained data integrity, configured DNS and security records, resolved delivery/authentication issues and supported users through the transition.</p>
+              <div class="project-result"><b>Scope:</b> mailboxes, contacts, calendars, shared drives, user accounts, distribution lists, security policies, MX/SPF/DKIM/DMARC, stakeholder coordination, user training and support documentation.</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual">
+              <svg viewBox="0 0 560 320" role="img" aria-label="Identity modernization flow from Active Directory to Microsoft Intune managed endpoints.">
+                <rect width="560" height="320" rx="16" fill="#0b1220"/>
+                <g font-family="Inter,Arial,sans-serif">
+                  <text x="28" y="36" fill="#7f92a8" font-size="10" letter-spacing="2">ENDPOINT MODERNIZATION · SMARTDOCS</text>
+                  <circle cx="120" cy="150" r="58" fill="#122236" stroke="#4f78a6"/>
+                  <text x="120" y="146" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">ACTIVE</text><text x="120" y="164" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">DIRECTORY</text>
+                  <path d="M178 150 H242" stroke="#4f78a6" stroke-width="2"/>
+                  <rect x="242" y="103" width="112" height="94" rx="12" fill="#102b2d" stroke="#4cbf9f"/>
+                  <text x="298" y="139" text-anchor="middle" fill="#72d5b2" font-size="13" font-weight="700">INTUNE</text><text x="298" y="160" text-anchor="middle" fill="#93a6bb" font-size="10">enrollment</text><text x="298" y="176" text-anchor="middle" fill="#93a6bb" font-size="10">policy + compliance</text>
+                  <path d="M354 150 H414" stroke="#4f78a6" stroke-width="2"/>
+                  <g fill="#122236" stroke="#4f78a6"><rect x="414" y="94" width="115" height="45" rx="10"/><rect x="414" y="151" width="115" height="45" rx="10"/><rect x="414" y="208" width="115" height="45" rx="10"/></g>
+                  <text x="471" y="122" text-anchor="middle" fill="#fff" font-size="10" font-weight="650">WINDOWS DEVICES</text><text x="471" y="179" text-anchor="middle" fill="#fff" font-size="10" font-weight="650">CONFIGURATION</text><text x="471" y="236" text-anchor="middle" fill="#fff" font-size="10" font-weight="650">COMPLIANCE</text>
+                  <rect x="78" y="260" width="402" height="30" rx="9" fill="#111d2b" stroke="#38546f"/>
+                  <text x="279" y="280" text-anchor="middle" fill="#93a6bb" font-size="9">SmartDocs · AD-to-Intune user and endpoint modernization</text>
+                </g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">Endpoint modernization</span><span class="project-date">SmartDocs Business Solutions</span></div>
+              <h3>Active Directory to Microsoft Intune Endpoint Migration</h3>
+              <div class="project-company">SmartDocs Business Solutions · Hyderabad</div>
+              <p>Migrated the user and endpoint management model from traditional Active Directory administration toward Microsoft Intune, with a focus on device enrollment, configuration, compliance and modern endpoint operations.</p>
+              <div class="project-result"><b>Core work:</b> Intune enrollment and policy administration, endpoint lifecycle controls, compliance enforcement, conditional access and remote-management workflows.</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual">
+              <svg viewBox="0 0 560 320" role="img" aria-label="Endpoint security platform migration from Bitdefender GravityZone to Microsoft Defender.">
+                <rect width="560" height="320" rx="16" fill="#0b1220"/>
+                <g font-family="Inter,Arial,sans-serif">
+                  <text x="28" y="36" fill="#7f92a8" font-size="10" letter-spacing="2">ENDPOINT SECURITY MODERNIZATION</text>
+                  <rect x="30" y="90" width="165" height="126" rx="14" fill="#122236" stroke="#4f78a6"/>
+                  <text x="112" y="125" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">BITDEFENDER</text><text x="112" y="146" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">GRAVITYZONE</text><text x="112" y="171" text-anchor="middle" fill="#93a6bb" font-size="10">existing protection</text><text x="112" y="189" text-anchor="middle" fill="#93a6bb" font-size="10">policy + response</text>
+                  <path d="M195 153 H350" stroke="#4f78a6" stroke-width="2"/>
+                  <path d="M328 138 l22 15 -22 15" stroke="#76a8ff" stroke-width="3" fill="none"/>
+                  <rect x="350" y="90" width="180" height="126" rx="14" fill="#102b2d" stroke="#4cbf9f"/>
+                  <text x="440" y="125" text-anchor="middle" fill="#72d5b2" font-size="12" font-weight="700">MICROSOFT</text><text x="440" y="146" text-anchor="middle" fill="#72d5b2" font-size="12" font-weight="700">DEFENDER</text><text x="440" y="171" text-anchor="middle" fill="#93a6bb" font-size="10">security visibility</text><text x="440" y="189" text-anchor="middle" fill="#93a6bb" font-size="10">incident triage</text>
+                  <rect x="87" y="249" width="386" height="40" rx="11" fill="#111d2b" stroke="#38546f"/>
+                  <text x="280" y="266" text-anchor="middle" fill="#edf4fb" font-size="10" font-weight="650">POLICY · DEPLOYMENT · VALIDATION · MONITORING</text>
+                  <text x="280" y="281" text-anchor="middle" fill="#7f92a8" font-size="8.5">SmartDocs · endpoint security platform migration</text>
+                </g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">Endpoint security</span><span class="project-date">SmartDocs Business Solutions</span></div>
+              <h3>Bitdefender GravityZone to Microsoft Defender Migration</h3>
+              <div class="project-company">SmartDocs Business Solutions · Hyderabad</div>
+              <p>Migrated endpoint security management from Bitdefender GravityZone toward Microsoft Defender, aligning endpoint protection and security visibility more closely with the Microsoft management stack.</p>
+              <div class="project-result"><b>Core work:</b> migration planning, endpoint policy transition, deployment validation, monitoring and Defender incident / alert operations.</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual">
+              <svg viewBox="0 0 560 320" role="img" aria-label="Remote access architecture connecting distributed users to FortiGate through SSL and IPsec VPN.">
+                <rect width="560" height="320" rx="16" fill="#0b1220"/>
+                <g font-family="Inter,Arial,sans-serif">
+                  <text x="28" y="36" fill="#7f92a8" font-size="10" letter-spacing="2">SECURE REMOTE ACCESS</text>
+                  <g fill="#122236" stroke="#4f78a6"><rect x="35" y="92" width="112" height="112" rx="12"/><rect x="224" y="92" width="112" height="112" rx="12"/><rect x="413" y="92" width="112" height="112" rx="12"/></g>
+                  <g stroke="#4f78a6" stroke-width="2"><path d="M147 148 H224"/><path d="M336 148 H413"/></g>
+                  <text x="91" y="125" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">USERS</text><text x="91" y="147" text-anchor="middle" fill="#93a6bb" font-size="10">distributed sites</text><text x="91" y="166" text-anchor="middle" fill="#93a6bb" font-size="10">100+ concurrent</text>
+                  <text x="280" y="125" text-anchor="middle" fill="#76a8ff" font-size="12" font-weight="700">FORTIGATE</text><text x="280" y="147" text-anchor="middle" fill="#93a6bb" font-size="10">SSL + IPsec</text><text x="280" y="166" text-anchor="middle" fill="#93a6bb" font-size="10">policy enforcement</text>
+                  <text x="469" y="125" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">INTERNAL</text><text x="469" y="147" text-anchor="middle" fill="#93a6bb" font-size="10">AD resources</text><text x="469" y="166" text-anchor="middle" fill="#93a6bb" font-size="10">segmented access</text>
+                  <rect x="100" y="243" width="360" height="40" rx="11" fill="#10251f" stroke="#2b8b6e"/>
+                  <text x="280" y="269" text-anchor="middle" fill="#72d5b2" font-size="10" font-weight="700">AUTHENTICATION · TUNNELS · ACCESS POLICY</text>
+                </g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">Network security</span><span class="project-date">SmartDocs Business Solutions</span></div>
+              <h3>Secure Remote Access for a Distributed Workforce</h3>
+              <div class="project-company">FortiClient VPN · FortiGate · Active Directory</div>
+              <p>Architected and operate FortiClient SSL and IPsec VPN infrastructure for geographically distributed sites, with access controls enforced through FortiGate and identity integrated with Active Directory.</p>
+              <div class="project-result"><b>Outcome:</b> supports 100+ concurrent users across multiple sites while keeping remote access controlled at the network perimeter.</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual">
+              <svg viewBox="0 0 560 320" role="img" aria-label="Network segmentation from FortiGate through core switching to separate staff, wireless and server networks.">
+                <rect width="560" height="320" rx="16" fill="#0b1220"/>
+                <g font-family="Inter,Arial,sans-serif">
+                  <text x="28" y="36" fill="#7f92a8" font-size="10" letter-spacing="2">SEGMENTED LAN / WLAN</text>
+                  <rect x="35" y="108" width="115" height="76" rx="11" fill="#122236" stroke="#5b9bf3"/>
+                  <rect x="220" y="108" width="115" height="76" rx="11" fill="#102b2d" stroke="#4cbf9f"/>
+                  <g fill="#122236" stroke="#4f78a6"><rect x="406" y="62" width="118" height="55" rx="10"/><rect x="406" y="132" width="118" height="55" rx="10"/><rect x="406" y="202" width="118" height="55" rx="10"/></g>
+                  <g stroke="#4f78a6" stroke-width="2" fill="none"><path d="M150 146 H220"/><path d="M335 146 H406"/><path d="M335 146 C366 146 366 90 406 90"/><path d="M335 146 C366 146 366 230 406 230"/></g>
+                  <text x="92" y="140" text-anchor="middle" fill="#76a8ff" font-size="12" font-weight="700">FORTIGATE</text><text x="92" y="161" text-anchor="middle" fill="#93a6bb" font-size="9">perimeter security</text>
+                  <text x="278" y="140" text-anchor="middle" fill="#72d5b2" font-size="12" font-weight="700">CBS350</text><text x="278" y="161" text-anchor="middle" fill="#93a6bb" font-size="9">managed core</text>
+                  <text x="465" y="85" text-anchor="middle" fill="#fff" font-size="10" font-weight="650">STAFF</text><text x="465" y="105" text-anchor="middle" fill="#93a6bb" font-size="8.5">managed endpoints</text>
+                  <text x="465" y="155" text-anchor="middle" fill="#fff" font-size="10" font-weight="650">WIRELESS</text><text x="465" y="175" text-anchor="middle" fill="#93a6bb" font-size="8.5">Aironet 1850</text>
+                  <text x="465" y="225" text-anchor="middle" fill="#fff" font-size="10" font-weight="650">SERVERS</text><text x="465" y="245" text-anchor="middle" fill="#93a6bb" font-size="8.5">AD · storage · services</text>
+                  <rect x="79" y="268" width="403" height="24" rx="8" fill="#111d2b" stroke="#38546f"/>
+                  <text x="280" y="284" text-anchor="middle" fill="#93a6bb" font-size="8.5">VLAN policy · web filtering · threat inspection · lateral movement reduction</text>
+                </g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">Network &amp; perimeter</span><span class="project-date">Ongoing operations</span></div>
+              <h3>Segmented LAN/WLAN with Next-Generation Perimeter Defence</h3>
+              <div class="project-company">Cisco CBS350 · Aironet 1850 · FortiGate 100F/80F</div>
+              <p>Operate the LAN and wireless layer across Cisco CBS350 managed switches, Aironet 1850 wireless and TP-Link PoE switching, with traffic separated by VLAN policy and inspected at the FortiGate perimeter.</p>
+              <div class="project-result"><b>Outcome:</b> 99.5%+ uptime maintained across business-critical systems with network segmentation used to reduce lateral movement.</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-num">03 · Experience</div>
+            <h2>Career progression</h2>
+            <p class="section-note">A progression from network engineering into broader infrastructure, security, endpoint management and governance ownership.</p>
+          </div>
+          <div class="small-note">May 2023 → Present</div>
+        </div>
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="job-top"><h3>Sr. System &amp; Network Administrator</h3><span class="job-date">Jul 2025 — Present</span><span class="current">Current</span></div>
+            <div class="job-company">SmartDocs Business Solutions · Hyderabad, India</div>
+            <ul>
+              <li>Primary IT L2 escalation point for a 200+ employee environment, maintaining 99.5%+ uptime SLA across business-critical systems.</li>
+              <li>Architect and manage FortiClient SSL/IPsec VPN infrastructure supporting 100+ concurrent users across distributed sites.</li>
+              <li>Operate Cisco CBS350, Aironet 1850 and TP-Link PoE LAN/WLAN infrastructure.</li>
+              <li>Configure and monitor FortiGate 100F/80F next-generation firewalls for perimeter defence, threat inspection and VLAN segmentation.</li>
+              <li>Administer Microsoft Intune across endpoint onboarding, compliance, conditional access and remote wipe.</li>
+              <li>Operate Microsoft Defender for threat detection, alert and incident triage, and security posture monitoring.</li>
+              <li>Manage Active Directory (500+ objects), ESSL biometric systems, Bitdefender GravityZone, Windows patch validation and PowerShell automation.</li>
+              <li>Drive SOC 2 Type II and ISO 27001 audit activities and author IT SOPs, network runbooks, security policies and incident-response playbooks.</li>
+            </ul>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-top"><h3>IT &amp; Network Administrator</h3><span class="job-date">Jun 2024 — Jun 2025</span></div>
+            <div class="job-company">Hearing Solution Pvt. Ltd. · India</div>
+            <ul>
+              <li>Delivered IT L2 support for a 150-seat call centre, improving SLA adherence by 75%.</li>
+              <li>Configured Sophos SSL VPN and OpenVPN for secure remote connectivity.</li>
+              <li>Led enterprise-wide Windows 11 deployment across 150+ endpoints with zero data loss.</li>
+              <li>Maintained Sophos XGS2100 firewall and implemented Sophos DLP controls for customer and business data protection.</li>
+              <li>Configured ESSL, TrueNAS and WD My Cloud EX4100 for centralised storage, backup and disaster-recovery readiness.</li>
+            </ul>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-top"><h3>Network Engineer</h3><span class="job-date">May 2023 — Jun 2024</span></div>
+            <div class="job-company">YuppTV India Pvt. Ltd. · Hyderabad, India</div>
+            <ul>
+              <li>Provided IT L2 support for 100+ users across desktops, laptops, servers and network equipment.</li>
+              <li>Configured Fortinet SSL/IPsec VPN tunnels and maintained on-premise Avaya IP Office VoIP infrastructure.</li>
+              <li>Implemented DLP policies and produced network topology documentation supporting disaster-recovery planning.</li>
+              <li>Managed Windows 10 Enterprise deployments using standardised imaging and post-deployment validation.</li>
+              <li>Resolved complex macOS issues and provided organisation-wide Office 365 troubleshooting.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-num">04 · Expertise</div>
+            <h2>Infrastructure &amp; security stack</h2>
+            <p class="section-note">A clearer view of the platforms and operational domains used across production environments.</p>
+          </div>
+          <div class="small-note">Production-focused · no skill percentages</div>
+        </div>
+        <div class="expertise">
+          <article class="expertise-card reveal"><div class="expertise-icon">⌘</div><h3>Networking</h3><p>Enterprise switching, routing and segmented LAN/WAN design.</p><div class="tags"><span class="tag">Cisco CBS350</span><span class="tag">VLAN</span><span class="tag">OSPF</span><span class="tag">EIGRP</span><span class="tag">STP / PVST</span><span class="tag">DNS / DHCP</span></div></article>
+          <article class="expertise-card reveal"><div class="expertise-icon">◇</div><h3>Security</h3><p>Perimeter security, VPN, web filtering and endpoint protection.</p><div class="tags"><span class="tag">FortiGate 100F/80F</span><span class="tag">Sophos XGS2100</span><span class="tag">SSL / IPsec</span><span class="tag">Defender</span><span class="tag">Bitdefender</span><span class="tag">DLP</span></div></article>
+          <article class="expertise-card reveal"><div class="expertise-icon">▣</div><h3>Endpoint &amp; Systems</h3><p>Modern management, directory services, servers and automation.</p><div class="tags"><span class="tag">Intune</span><span class="tag">Conditional Access</span><span class="tag">Active Directory</span><span class="tag">Windows Server</span><span class="tag">PowerShell</span><span class="tag">Linux</span></div></article>
+          <article class="expertise-card reveal"><div class="expertise-icon">✓</div><h3>Governance</h3><p>Audit readiness, policies, runbooks and repeatable IT controls.</p><div class="tags"><span class="tag">SOC 2 Type II</span><span class="tag">ISO 27001</span><span class="tag">SOPs</span><span class="tag">Runbooks</span><span class="tag">Incident response</span></div></article>
+        </div>
+
+        <div class="skills-grid" style="margin-top:20px;">
+          <div class="stack-table reveal">
+            <div class="stack-row"><h3>Cloud &amp; SaaS</h3><p>Microsoft 365, SharePoint, OneDrive, Zoho Suite</p></div>
+            <div class="stack-row"><h3>Wireless &amp; hardware</h3><p>Cisco Aironet 1850, HPE ProLiant, Dell PowerEdge, TP-Link PoE</p></div>
+            <div class="stack-row"><h3>VoIP &amp; ITSM</h3><p>Avaya IP Office, AssetTiger, CMDB documentation, AnyDesk, TeamViewer, RDP</p></div>
+            <div class="stack-row"><h3>OS</h3><p>Windows 10/11 Enterprise, Windows Server 2019/2012 R2, CentOS 7, Ubuntu, macOS</p></div>
+          </div>
+          <div class="panel reveal">
+            <h3>How I work</h3>
+            <p>Plan the change, protect the business, execute cleanly, validate the result and leave behind documentation that another administrator can actually use.</p>
+            <div class="tags"><span class="tag">Change planning</span><span class="tag">Migration runbooks</span><span class="tag">Rollback planning</span><span class="tag">Post-change validation</span><span class="tag">Documentation</span><span class="tag">Automation</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-num">05 · Certifications</div>
+            <h2>Professional credentials</h2>
+            <p class="section-note">Major credentials first, then active learning. Verification links are included where available.</p>
+          </div>
+        </div>
+        <div class="skills-grid">
+          <div class="credentials reveal">
+            <div class="credential"><div class="credential-badge">MS</div><div><h3>Microsoft 365 Certified: Endpoint Administrator Associate</h3><small>MD-102 · Earned Jun 2026 · valid to Jun 2027</small></div><a class="verify" href="https://learn.microsoft.com/en-us/users/satyabanchoudhury-4201/credentials/eb38431d11d5ee20" target="_blank" rel="noopener">Verify ↗</a></div>
+            <div class="credential"><div class="credential-badge">FCA</div><div><h3>Fortinet Certified Associate — Cybersecurity</h3><small>Issued Mar 2026 · valid to Mar 2028</small></div><a class="verify" href="https://www.credly.com/badges/872333b7-f844-4e62-a4d2-4707696fd2b1" target="_blank" rel="noopener">Verify ↗</a></div>
+            <div class="credential"><div class="credential-badge">FCF</div><div><h3>Fortinet Certified Fundamentals — Cybersecurity</h3><small>Issued Mar 2026 · valid to Mar 2028</small></div><a class="verify" href="https://www.credly.com/badges/67903a66-dc22-45a6-b4f8-ad65181659f5" target="_blank" rel="noopener">Verify ↗</a></div>
+            <div class="credential"><div class="credential-badge">CCNA</div><div><h3>Cisco Certified Network Associate</h3><small>Completed</small></div><span></span></div>
+          </div>
+          <div class="panel reveal">
+            <h3>Current learning</h3>
+            <p style="margin-bottom:16px;">Keeping future credentials visually separate from earned certifications.</p>
+            <div class="credential" style="margin-bottom:8px;"><div class="credential-badge">NSE4</div><div><h3>Fortinet NSE 4 — Network Security Professional</h3><small>In progress</small></div><span class="verify">In progress</span></div>
+            <div class="credential" style="margin-bottom:8px;"><div class="credential-badge">SEC+</div><div><h3>CompTIA Security+</h3><small>Planned</small></div><span class="verify">Planned</span></div>
+            <div class="education"><strong>Linux Administration</strong><span>Course completion · Udemy</span></div>
+            <div class="education"><strong>B.Sc. Electronics</strong><span>Berhampur University, Odisha · 2018–2021</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="bottom-grid">
+          <div class="panel reveal">
+            <div class="section-num">06 · Contact</div>
+            <h2>Let’s build resilient infrastructure.</h2>
+            <p>Open to senior network, infrastructure and IT security roles in Hyderabad or remote.</p>
+            <div class="contact-grid">
+              <a class="contact-link" href="mailto:chou.satyaban123@gmail.com"><small>Email</small><span>chou.satyaban123@gmail.com</span></a>
+              <a class="contact-link" href="tel:+917735373892"><small>Phone</small><span>+91 77353 73892</span></a>
+              <a class="contact-link" href="https://linkedin.com/in/satyaban-choudhury" target="_blank" rel="noopener"><small>LinkedIn</small><span>View professional profile ↗</span></a>
+              <a class="contact-link" href="satyaban-choudhury-resume.pdf" download><small>Résumé</small><span>Download PDF ↓</span></a>
+            </div>
+          </div>
+          <div class="panel reveal">
+            <div class="section-num">Profile</div>
+            <h3>Education &amp; languages</h3>
+            <div class="education" style="margin-top:16px;"><strong>B.Sc. Electronics</strong><span>Berhampur University, Odisha · 2018–2021</span></div>
+            <div class="education"><strong>Languages</strong><span>English (professional) · Hindi (native) · Odia (native)</span></div>
+            <div class="education"><strong>Professional focus</strong><span>Network infrastructure · endpoint management · security operations · IT migrations · governance</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Satyaban Choudhury · Senior Network &amp; Infrastructure Administrator</span>
+      <span>Hyderabad, India · Last updated September 2026</span>
     </div>
-  </section>
-
-  <!-- WORK -->
-  <section class="unit" id="work">
-    <div class="u-label" aria-hidden="true"><span>U05 · WORK</span></div>
-    <h2 class="rv">Selected infrastructure work</h2>
-    <p class="sec-note rv">Five builds, each written as: what was broken, what I did, what changed.</p>
-
-    <div class="cases">
-      <article class="case rv" style="--cc:var(--sec);--cct:var(--sec-t)">
-        <div class="case-tag"><i></i>Remote access architecture</div>
-        <h3>Secure remote access for a distributed workforce</h3>
-        <p>Staff across several geographically separated sites needed to reach internal systems without exposing them to the open internet, and the existing access path was generating recurring incidents.</p>
-        <p>I designed and now operate the <b>FortiClient VPN infrastructure</b> using both SSL and IPsec tunnels, sized for concurrent load and split by site. Access is tied to Active Directory identity, and tunnel policy is enforced at the FortiGate rather than on the client.</p>
-        <p class="result">Supports 100+ concurrent users across multiple sites with access-related incidents down sharply.</p>
-        <div class="stack"><span>FortiGate 100F</span><span>SSL VPN</span><span>IPsec</span><span>FortiClient EMS</span><span>Active Directory</span></div>
-      </article>
-
-      <article class="case rv" style="--cc:var(--sys);--cct:var(--sys-t)">
-        <div class="case-tag"><i></i>Endpoint management · MD-102</div>
-        <h3>Managed endpoint lifecycle and threat visibility</h3>
-        <p>Devices were being onboarded inconsistently, and there was no enforced way to stop sensitive customer data leaving the organisation.</p>
-        <p>I administer <b>Microsoft Intune (MDM/MAM)</b> for onboarding, compliance policy, conditional access and remote wipe, and work in the <b>Microsoft Defender portal</b> for threat detection, incident triage and security posture across the estate. <b>Bitdefender GravityZone</b> handles real-time response on the endpoint, and <b>Sophos DLP</b> rules guard against unauthorised exfiltration.</p>
-        <p class="result">Every device enrolled, compliant and remotely recoverable; threats surfaced and triaged from a single console.</p>
-        <div class="stack"><span>Intune MDM/MAM</span><span>Microsoft Defender</span><span>Conditional access</span><span>Bitdefender GravityZone</span><span>Sophos DLP</span><span>TrueNAS</span></div>
-      </article>
-
-      <article class="case rv" style="--cc:var(--gov);--cct:var(--gov-t)">
-        <div class="case-tag"><i></i>Compliance &amp; audit</div>
-        <h3>SOC 2 Type II and ISO 27001 audit readiness</h3>
-        <p>The organisation needed to demonstrate to external auditors that its IT controls were not just written down but actually operating — the part most teams fail on.</p>
-        <p>I ran evidence collection across access control, patching, logging and endpoint protection, identified where controls had gaps in practice, remediated them, and coordinated directly with the external auditors through the review. I also authored the <b>SOPs, network runbooks, security policies and incident response playbooks</b> that keep the controls repeatable after the audit ends.</p>
-        <p class="result">Controls evidenced and gaps closed across both frameworks; governance documentation now standard operating practice.</p>
-        <div class="stack"><span>SOC 2 Type II</span><span>ISO 27001</span><span>Policy authoring</span><span>Incident response</span></div>
-      </article>
-
-      <article class="case rv" style="--cc:var(--sys);--cct:var(--sys-t)">
-        <div class="case-tag"><i></i>Fleet migration</div>
-        <h3>Windows 11 rollout across 150+ endpoints</h3>
-        <p>A 150-seat call centre had to move to Windows 11 without losing a working day or a single user's data — in an environment where idle agents cost money by the minute.</p>
-        <p>I built the standard image, resolved driver compatibility ahead of rollout, sequenced the migration by team, and validated each machine post-deployment before handing it back.</p>
-        <p class="result">150+ endpoints migrated with zero data loss and no extended outage to floor operations.</p>
-        <div class="stack"><span>Windows 11</span><span>Imaging</span><span>Driver compatibility</span><span>User migration</span></div>
-      </article>
-
-      <article class="case rv" style="--cc:var(--net);--cct:var(--net-t)">
-        <div class="case-tag"><i></i>Network &amp; perimeter</div>
-        <h3>Segmented LAN/WLAN with next-gen perimeter defence</h3>
-        <p>A flat network means one compromised endpoint reaches everything. The estate also had to stay reachable for 200+ users with no tolerance for connectivity gaps.</p>
-        <p>I run the LAN and wireless layer on <b>Cisco CBS350 managed switches, Aironet 1850 wireless and TP-Link PoE</b>, with traffic separated by VLAN policy and inspected at <b>FortiGate 100F/80F</b> firewalls for threats and web filtering at the perimeter.</p>
-        <p class="result">99.5%+ uptime maintained across business-critical systems with segmentation limiting lateral movement.</p>
-        <div class="stack"><span>VLAN</span><span>OSPF / EIGRP</span><span>Cisco CBS350</span><span>Aironet 1850</span><span>Web filtering</span></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="unit" id="experience">
-    <div class="u-label" aria-hidden="true"><span>U06 · HISTORY</span></div>
-    <h2 class="rv">Experience</h2>
-    <p class="sec-note rv">Three years, three environments, progressively larger estates.</p>
-
-    <div class="jobs">
-      <article class="job now rv" style="--jc:var(--sys)">
-        <div class="job-head">
-          <span class="job-when">Jul 2025 — Present</span>
-          <span class="job-now">Current</span>
-        </div>
-        <h3>Sr. System &amp; Network Administrator</h3>
-        <p class="job-co">SmartDocs Business Solutions · Hyderabad</p>
-        <ul>
-          <li>Primary L2 escalation point for a 200+ employee environment, holding 99.5%+ uptime SLA on business-critical systems.</li>
-          <li>Architected and operate FortiClient SSL/IPsec VPN for 100+ concurrent users across distributed sites.</li>
-          <li>Run LAN/WLAN operations on Cisco CBS350, Aironet 1850 and TP-Link PoE infrastructure.</li>
-          <li>Configure and tune FortiGate 100F/80F firewalls for perimeter defence, threat inspection and VLAN segmentation.</li>
-          <li>Administer Microsoft Intune for endpoint lifecycle: onboarding, compliance, conditional access, remote wipe.</li>
-          <li>Operate the Microsoft Defender portal for threat detection, alert and incident triage, and security posture monitoring.</li>
-          <li>Manage Active Directory (500+ objects) and ESSL biometric servers for identity and access control.</li>
-          <li>Write PowerShell automation for routine administration and validate enterprise patch deployment.</li>
-          <li>Drive SOC 2 Type II and ISO 27001 audits, and author the SOPs, runbooks and IR playbooks behind them.</li>
-        </ul>
-      </article>
-
-      <article class="job rv" style="--jc:var(--sec)">
-        <div class="job-head"><span class="job-when">Jun 2024 — Jun 2025</span></div>
-        <h3>IT &amp; Network Administrator</h3>
-        <p class="job-co">Hearing Solution Pvt. Ltd.</p>
-        <ul>
-          <li>Delivered L2 support for a 150-seat call centre, improving SLA adherence by 75%.</li>
-          <li>Configured Sophos SSL VPN and OpenVPN tunnels for secure remote connectivity.</li>
-          <li>Led the enterprise Windows 11 deployment across 150+ endpoints with zero data loss.</li>
-          <li>Maintained Sophos XGS2100 firewall: threat policy, web filtering, traffic inspection.</li>
-          <li>Implemented Sophos DLP to protect customer and business data from exfiltration.</li>
-          <li>Configured ESSL, TrueNAS and WD My Cloud EX4100 for centralised storage, backup and DR readiness.</li>
-        </ul>
-      </article>
-
-      <article class="job rv" style="--jc:var(--net)">
-        <div class="job-head"><span class="job-when">May 2023 — Jun 2024</span></div>
-        <h3>Network Engineer</h3>
-        <p class="job-co">YuppTV India Pvt. Ltd. · Hyderabad</p>
-        <ul>
-          <li>Provided L2 support for 100+ users across desktops, laptops, servers and network equipment.</li>
-          <li>Configured Fortinet SSL/IPsec VPN tunnels and maintained on-premise Avaya IP Office VoIP.</li>
-          <li>Implemented DLP policy and produced network topology documentation for DR planning.</li>
-          <li>Managed Windows 10 Enterprise imaging and post-deployment validation.</li>
-          <li>Resolved complex macOS issues and handled Office 365 troubleshooting organisation-wide.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="unit" id="skills">
-    <div class="u-label" aria-hidden="true"><span>U07 · STACK</span></div>
-    <h2 class="rv">Technical stack</h2>
-    <p class="sec-note rv">Everything below has been run in production, not just studied.</p>
-    <table class="comp rv">
-      <tbody>
-        <tr style="--rc:var(--net)"><th scope="row">Networking</th><td>Switching &amp; routing (RIP, EIGRP, OSPF), VLAN, VTP, STP, PVST, TCP/IP, DNS, DHCP, LAN/WAN design</td></tr>
-        <tr style="--rc:var(--sec)"><th scope="row">Firewall &amp; VPN</th><td>Fortinet FortiGate 100F/80F, Sophos XGS2100, SSL VPN, IPsec VPN, FortiClient, web filtering</td></tr>
-        <tr style="--rc:var(--sys)"><th scope="row">Endpoint management</th><td>Microsoft Intune (MDM/MAM), compliance policies, conditional access, remote wipe, patch management</td></tr>
-        <tr style="--rc:var(--sec)"><th scope="row">Threat &amp; endpoint security</th><td>Microsoft Defender portal (detection, incident triage, security posture), Bitdefender GravityZone, Sophos DLP, FortiClient EMS</td></tr>
-        <tr style="--rc:var(--sys)"><th scope="row">Server &amp; AD</th><td>Windows Server 2019 / 2012 R2, Active Directory (500+ objects), Group Policy, TrueNAS, ESSL</td></tr>
-        <tr style="--rc:var(--net)"><th scope="row">Wireless &amp; hardware</th><td>Cisco Aironet 1850, Cisco CBS350 switches, HPE ProLiant, Dell PowerEdge, TP-Link PoE</td></tr>
-        <tr style="--rc:var(--sys)"><th scope="row">Cloud &amp; SaaS</th><td>Microsoft 365, SharePoint, OneDrive, Zoho Suite</td></tr>
-        <tr style="--rc:var(--gov)"><th scope="row">Compliance &amp; GRC</th><td>SOC 2 Type II, ISO 27001 auditing, SOP authoring, policy governance, incident response</td></tr>
-        <tr style="--rc:var(--sys)"><th scope="row">OS &amp; scripting</th><td>Linux (CentOS 7, Ubuntu), macOS, Windows 10/11 Enterprise, PowerShell automation</td></tr>
-        <tr style="--rc:var(--net)"><th scope="row">VoIP &amp; ITSM</th><td>Avaya IP Office, AssetTiger, CMDB documentation, AnyDesk, TeamViewer, RDP</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- CERTS -->
-  <section class="unit" id="certifications">
-    <div class="u-label" aria-hidden="true"><span>U08 · CERTS</span></div>
-    <h2 class="rv">Certifications</h2>
-    <p class="sec-note rv">Every credential below links to its issuer for verification.</p>
-    <ul class="certs">
-      <li class="rv" style="--bc:var(--sec);--bct:var(--sec-t)">
-        <span class="badge" aria-hidden="true">MS</span>
-        <div class="cert-body">
-          Microsoft 365 Certified: Endpoint Administrator Associate (MD-102)
-          <small>Earned June 2026 · valid to June 2027 · Microsoft Learn</small>
-        </div>
-        <a class="vf" href="https://learn.microsoft.com/en-us/users/satyabanchoudhury-4201/credentials/eb38431d11d5ee20" target="_blank" rel="noopener" aria-label="Verify MD-102 on Microsoft Learn">Verify</a>
-        <span class="st">Certified</span>
-      </li>
-      <li class="rv" style="--bc:var(--net);--bct:var(--net-t)">
-        <span class="badge" aria-hidden="true">FCA</span>
-        <div class="cert-body">
-          Fortinet Certified Associate — Cybersecurity
-          <small>Issued March 2026 · valid to March 2028 · Credly</small>
-        </div>
-        <a class="vf" href="https://www.credly.com/badges/872333b7-f844-4e62-a4d2-4707696fd2b1" target="_blank" rel="noopener" aria-label="Verify Fortinet Certified Associate on Credly">Verify</a>
-        <span class="st">Certified</span>
-      </li>
-      <li class="rv" style="--bc:var(--net);--bct:var(--net-t)">
-        <span class="badge" aria-hidden="true">FCF</span>
-        <div class="cert-body">
-          Fortinet Certified Fundamentals — Cybersecurity
-          <small>Issued March 2026 · valid to March 2028 · Credly</small>
-        </div>
-        <a class="vf" href="https://www.credly.com/badges/67903a66-dc22-45a6-b4f8-ad65181659f5" target="_blank" rel="noopener" aria-label="Verify Fortinet Certified Fundamentals on Credly">Verify</a>
-        <span class="st">Certified</span>
-      </li>
-      <li class="rv" style="--bc:var(--sec);--bct:var(--sec-t)">
-        <span class="badge" aria-hidden="true">CCNA</span>
-        <div class="cert-body">Cisco Certified Network Associate</div>
-        <span class="st">Certified</span>
-      </li>
-      <li class="rv" style="--bc:var(--gov);--bct:var(--gov-t)">
-        <span class="badge ghost" aria-hidden="true">NSE4</span>
-        <div class="cert-body">
-          Fortinet NSE 4 — Network Security Professional
-          <small>Next step on the Fortinet path after FCF and FCA</small>
-        </div>
-        <span class="st">In progress</span>
-      </li>
-      <li class="rv" style="--bc:var(--dim);--bct:var(--surface-2)">
-        <span class="badge ghost" aria-hidden="true">SEC+</span>
-        <div class="cert-body">CompTIA Security+</div>
-        <span class="st">Planned</span>
-      </li>
-    </ul>
-
-    <p class="sec-note rv" style="margin:34px 0 14px">Training</p>
-    <ul class="certs">
-      <li class="rv" style="--bc:var(--sys);--bct:var(--sys-t)">
-        <span class="badge" aria-hidden="true">LNX</span>
-        <div class="cert-body">
-          Linux Administration
-          <small>Course completion · Udemy</small>
-        </div>
-        <a class="vf" href="https://www.udemy.com/certificate/UC-ede67265-6e1f-4200-8e45-43c8051ea909/" target="_blank" rel="noopener" aria-label="View Linux Administration certificate on Udemy">Verify</a>
-        <span class="st">Completed</span>
-      </li>
-    </ul>
-
-    <p class="sec-note rv" style="margin:34px 0 8px">Education</p>
-    <p class="rv" style="margin:0">B.Sc. Electronics — Berhampur University, Odisha · 2018–2021</p>
-    <p class="sec-note rv" style="margin:22px 0 0">English (professional) · Hindi (native) · Odia (native)</p>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="unit" id="contact">
-    <div class="u-label" aria-hidden="true"><span>U09 · UPLINK</span></div>
-    <h2 class="rv">Get in touch</h2>
-    <p class="sec-note rv">Open to senior network, infrastructure and IT security roles in Hyderabad or remote.</p>
-    <div class="contact-grid">
-      <a class="cc rv" href="mailto:chou.satyaban123@gmail.com"><small>Email</small><span>chou.satyaban123@gmail.com</span></a>
-      <a class="cc rv" href="tel:+917735373892"><small>Phone</small><span>+91 77353 73892</span></a>
-      <a class="cc rv" href="https://linkedin.com/in/satyaban-choudhury" target="_blank" rel="noopener"><small>LinkedIn</small><span>satyaban-choudhury</span></a>
-      <a class="cc rv" href="satyaban-choudhury-resume.pdf" download><small>Résumé</small><span>Download PDF</span></a>
-    </div>
-  </section>
-
-  <footer class="foot">
-    <span>Satyaban Choudhury · Hyderabad, India</span>
-    <span>Last updated August 2026</span>
   </footer>
-</main>
 
-<script>
-(function(){
-  var root = document.documentElement,
-      reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  <script>
+    (function(){
+      document.documentElement.classList.add('js');
+      var root=document.documentElement;
+      var themeBtn=document.getElementById('themeBtn');
+      var navShell=document.getElementById('navShell');
+      var menuBtn=document.getElementById('menuBtn');
+      var progress=document.getElementById('progress');
 
-  /* ---- theme switch ---- */
-  var btn = document.getElementById("themeBtn");
-  btn.addEventListener("click", function(){
-    var dark = root.getAttribute("data-theme") === "dark";
-    root.setAttribute("data-theme", dark ? "light" : "dark");
-    btn.setAttribute("aria-checked", String(!dark));
-    btn.setAttribute("aria-label", dark ? "Switch to dark mode" : "Switch to light mode");
-    document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#EDF1F7" : "#0B121C");
-  });
+      function applyTheme(theme){
+        root.setAttribute('data-theme',theme);
+        localStorage.setItem('theme',theme);
+        themeBtn.setAttribute('aria-label',theme==='dark'?'Switch to light mode':'Switch to dark mode');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content',theme==='dark'?'#08111d':'#f8fafc');
+      }
+      var saved=localStorage.getItem('theme');
+      if(saved==='dark'||saved==='light') applyTheme(saved);
+      else if(window.matchMedia('(prefers-color-scheme: dark)').matches) applyTheme('dark');
+      themeBtn.addEventListener('click',function(){ applyTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'); });
 
-  /* ---- scroll progress ---- */
-  var prog = document.getElementById("prog");
-  function onScroll(){
-    var h = document.documentElement.scrollHeight - window.innerHeight;
-    prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
-  }
-  window.addEventListener("scroll", onScroll, {passive:true});
-  onScroll();
-
-  /* ---- reveal on scroll ---- */
-  var rvs = document.querySelectorAll(".rv");
-  if (reduce || !("IntersectionObserver" in window)){
-    for (var r=0;r<rvs.length;r++) rvs[r].classList.add("in");
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e, n){
-        if (e.isIntersecting){
-          var el = e.target;
-          setTimeout(function(){ el.classList.add("in"); }, n * 70);
-          io.unobserve(el);
-        }
+      menuBtn.addEventListener('click',function(){
+        var open=navShell.classList.toggle('menu-open');
+        menuBtn.setAttribute('aria-expanded',String(open));
+        menuBtn.setAttribute('aria-label',open?'Close navigation':'Open navigation');
       });
-    }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
-    for (var q=0;q<rvs.length;q++) io.observe(rvs[q]);
-  }
+      document.querySelectorAll('.nav-links a').forEach(function(link){ link.addEventListener('click',function(){ navShell.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded','false'); }); });
 
-  /* ---- animated counters ---- */
-  var nums = document.querySelectorAll(".stat dd");
-  function runCount(el){
-    var to = parseFloat(el.getAttribute("data-to")),
-        suf = el.getAttribute("data-suf") || "",
-        dec = (String(to).indexOf(".") > -1) ? 1 : 0;
-    if (reduce){ el.textContent = to.toFixed(dec) + suf; return; }
-    var start = null, dur = 1300;
-    function step(ts){
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / dur, 1),
-          eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = (to * eased).toFixed(dec) + suf;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  var strip = document.querySelector(".strip");
-  if (strip && "IntersectionObserver" in window){
-    var io2 = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if (e.isIntersecting){
-          var cells = strip.querySelectorAll(".stat");
-          for (var c=0;c<cells.length;c++) cells[c].classList.add("in");
-          for (var m=0;m<nums.length;m++) runCount(nums[m]);
-          io2.disconnect();
-        }
-      });
-    }, {threshold:.3});
-    io2.observe(strip);
-  } else {
-    for (var z=0;z<nums.length;z++) runCount(nums[z]);
-  }
+      function scrollProgress(){
+        var total=document.documentElement.scrollHeight-window.innerHeight;
+        progress.style.width=(total>0?(window.scrollY/total)*100:0)+'%';
+      }
+      window.addEventListener('scroll',scrollProgress,{passive:true});
+      scrollProgress();
 
-  /* ---- patch panel ---- */
-  var PORTS = [
-    ["OSPF Routing","net"],["EIGRP Routing","net"],["VLAN &amp; VTP","net"],
-    ["STP / PVST","net"],["DNS &amp; DHCP","net"],["LAN/WAN Design","net"],
-    ["Cisco CBS350","net"],["Aironet 1850 WLAN","net"],
-    ["FortiGate 100F/80F","sec"],["Sophos XGS2100","sec"],["SSL VPN","sec"],
-    ["IPsec VPN","sec"],["FortiClient EMS","sec"],["Microsoft Defender","sec"],
-    ["Bitdefender GravityZone","sec"],["Sophos DLP","sec"],
-    ["Intune MDM/MAM","sys"],["Conditional Access","sys"],["Active Directory","sys"],
-    ["Group Policy","sys"],["Windows Server 2019","sys"],["PowerShell","sys"],
-    ["SOC 2 Type II","gov"],["ISO 27001","gov"]
-  ];
-  var GROUPS = {
-    net:["Networking","var(--p-net)"],
-    sec:["Firewall &amp; Security","var(--p-sec)"],
-    sys:["Servers &amp; Cloud","var(--p-sys)"],
-    gov:["Compliance","var(--p-gov)"]
-  };
-  var panel = document.getElementById("panel"),
-      pnums = document.getElementById("panelNums"),
-      read  = document.getElementById("readout");
-
-  PORTS.forEach(function(p, i){
-    var g = GROUPS[p[1]];
-    var b = document.createElement("button");
-    b.type = "button";
-    b.className = "port";
-    b.style.setProperty("--pc", g[1]);
-    b.style.animationDelay = reduce ? "0s" : (i * 0.035) + "s";
-    b.setAttribute("aria-label", p[0].replace(/&amp;/g,"&") + " — " + g[0].replace(/&amp;/g,"&"));
-    b.innerHTML = '<i class="led"></i><i class="jack"></i><i class="tab"></i>';
-    var show = function(){
-      var prev = panel.querySelectorAll('.port[aria-current="true"]');
-      for (var k=0;k<prev.length;k++) prev[k].removeAttribute("aria-current");
-      b.setAttribute("aria-current","true");
-      read.innerHTML =
-        '<span class="rd-port">PORT ' + String(i+1).padStart(2,"0") + '</span>' +
-        '<span class="rd-name">' + p[0] + '</span>' +
-        '<span class="rd-grp" style="color:' + g[1] + ';background:color-mix(in srgb,' + g[1] + ' 15%,transparent)">' + g[0] + '</span>';
-    };
-    b.addEventListener("mouseenter", show);
-    b.addEventListener("focus", show);
-    b.addEventListener("click", show);
-    panel.appendChild(b);
-
-    var n = document.createElement("span");
-    n.textContent = String(i+1).padStart(2,"0");
-    pnums.appendChild(n);
-  });
-
-  var ports = panel.querySelectorAll(".port");
-  for (var i=0;i<ports.length;i++){
-    (function(el, idx){
-      if (reduce) el.classList.add("live");
-      else setTimeout(function(){ el.classList.add("live"); }, 300 + idx * 55);
-    })(ports[i], i);
-  }
-})();
-</script>
+      var prefersReduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var items=document.querySelectorAll('.reveal');
+      if(prefersReduce || !('IntersectionObserver' in window)){
+        items.forEach(function(el){el.classList.add('is-visible');});
+      } else {
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+          });
+        },{rootMargin:'0px 0px -7% 0px',threshold:.08});
+        items.forEach(function(el){io.observe(el);});
+      }
+    })();
+  </script>
 </body>
 </html>
