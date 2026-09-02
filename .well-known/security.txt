@@ -1,0 +1,4 @@
+Contact: mailto:chou.satyaban123@gmail.com
+Preferred-Languages: en
+Canonical: https://its-satyaban.github.io/.well-known/security.txt
+Policy: https://its-satyaban.github.io/security-policy.html
