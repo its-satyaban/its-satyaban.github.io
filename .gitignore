@@ -1,0 +1,33 @@
+# Secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*.p12
+credentials.json
+service-account.json
+secrets.json
+
+# Network / infrastructure backups
+*.cfg
+*.conf
+*.bak
+*.backup
+*.dump
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE / local tooling
+.vscode/
+.idea/
+
+# OS / build artifacts
+node_modules/
+dist/
+build/
