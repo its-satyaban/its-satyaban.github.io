@@ -17,7 +17,7 @@ Static GitHub Pages portfolio for Satyaban Choudhury, Senior Network & Infrastru
 
 ## GitHub Pages
 
-Recommended repository: `its-satyaban.github.io` and branch: `main`.
+Recommended repository: `satyabanchoudhury.github.io` and branch: `main`.
 
 In GitHub: **Settings → Pages → Deploy from a branch → main → / (root)**.
 
